@@ -1,0 +1,121 @@
+.tabs-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  top: 0;
+  left: 0;
+  z-index: 10; /* اصلاح z-index برای هماهنگی */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* رنگ تیره */
+  display: none;
+  z-index: 15; /* اطمینان از اینکه زیر محتوای تب‌ها باشد */
+}
+
+.overlay.show {
+  display: block; /* نمایش لایه تیره */
+}
+
+.tabs-container {
+  // position: relative; /* استفاده از relative به‌جای absolute */
+  top: 0;
+  right: 0;
+  z-index: 20; /* بالاتر از لایه تیره */
+}
+
+.tabs-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 25; /* بالاتر از لایه تیره */
+}
+
+.tab-button {
+  padding: 15px 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #B6C5F2;
+  color: #fff;
+  transition: all 0.7s ease-in-out;
+  text-align: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  margin-right: 10px;
+}
+
+.tab-button.clicked {
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+.tabs-content {
+  position: absolute;
+  top: 50%; /* تنظیم هم‌راستایی عمودی */
+  right: 100px;
+  transform: translateY(-50%);
+  z-index: 30; /* بالاتر از لایه تیره */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+}
+
+.tab-content.show {
+  opacity: 1;
+  visibility: visible;
+  z-index: 35; /* بالاتر از لایه تیره */
+}
+
+
+/* تعریف انیمیشن برای ورود از سمت راست */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%); /* شروع از بیرون صفحه از سمت راست */
+    opacity: 0; /* شروع با عدم نمایش */
+  }
+  to {
+    transform: translateX(0); /* توقف در محل نهایی */
+    opacity: 1; /* نمایش کامل */
+  }
+}
+
+/* تنظیم انیمیشن برای محتوای تب‌ها */
+.tabs-content .tab-content {
+  animation: slideInRight 0.7s ease-out; /* اعمال انیمیشن */
+}
+
+/* اطمینان از نمایش در محل صحیح */
+.tab-content {
+  position: relative; /* تنظیم موقعیت‌دهی */
+  opacity: 0; /* عدم نمایش پیش‌فرض */
+}
+
+.tab-content.show {
+  opacity: 1; /* نمایش کامل در حالت نهایی */
+}
+
+
+.tab-content {
+  width: 250px; /* تنظیم عرض */
+  height: auto; /* ارتفاع به‌صورت خودکار */
+  padding: 15px; /* حاشیه داخلی */
+  margin: 10px; /* فاصله از اطراف */
+  border: 1px solid #ddd; /* ایجاد یک خط حاشیه */
+  border-radius: 10px; /* گرد کردن لبه‌ها */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ایجاد سایه */
+  background-color: #f9f9f9; /* رنگ پس‌زمینه */
+  transition: all 0.5s ease-in-out; /* انیمیشن کلی */
+}

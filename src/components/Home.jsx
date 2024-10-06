@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import AnimatedText from './AnimatedText.'; 
+import AnimatedText from './AnimatedText.jsx';
+import Header from './Header.jsx';
+import Sidebar from './Sidebar.jsx';
+import Footer from './Footer.jsx';
+import Tabs from './Tabs.jsx';
+import '../styles/Home.scss';
+
+
 
 function Home() {
   const [initialMessage, setInitialMessage] = useState(""); 
@@ -17,13 +24,22 @@ function Home() {
       .catch((error) => console.error('Error loading home data:', error));
   }, []);
 
+ 
   return (
-    <div className="home-container">
-      <AnimatedText initialMessage={initialMessage} finalMessage={finalMessage} duration={400} />
-
-      <p className="welcome-message">{welcomeMessage}</p>
+    <div className="home-page">
+      <Header />
+      <div className="main-content">
+        <Sidebar /> 
+        <div className="content-area">
+          <AnimatedText initialMessage={initialMessage} finalMessage={finalMessage} duration={400} />
+          <p className="welcome-message">{welcomeMessage}</p>
+        </div>
+        <Tabs /> 
+      </div>
+      <Footer />
     </div>
   );
 }
+
 
 export default Home;
