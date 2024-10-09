@@ -1,0 +1,26 @@
+{
+    "slides": [
+      {
+        "id": 1,
+        "title": "Project One",
+        "image": "/images/project1.jpg",
+        "text": "This is a short description of Project One.",
+        "link": "/project1"
+      },
+      {
+        "id": 2,
+        "title": "Project Two",
+        "image": "/images/project2.jpg",
+        "text": "This is a short description of Project Two.",
+        "link": "/project2"
+      },
+      {
+        "id": 3,
+        "title": "Project Three",
+        "image": "/images/project3.jpg",
+        "text": "This is a short description of Project Three.",
+        "link": "/project3"
+      }
+    ]
+  }
+  

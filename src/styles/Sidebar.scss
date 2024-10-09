@@ -4,12 +4,11 @@
     padding: 0;       
     margin: 0;        
     background: #fff;
-    height: 100vh;     
+    height: 180vh;     
     width: 80px;      
     position: fixed;  
     top: 0;
     left: 0;           
-    // z-index: 999;    
   }
 
   .sidebar ul {
@@ -20,4 +19,27 @@
     flex-direction: column;        // جهت‌گیری عمودی
     justify-content: space-between; // توزیع فاصله بین آیکون‌ها
     height: 150px;  
+  }
+
+
+  @media (max-width: 768px){
+  .sidebar{
+    height: 100vh;
+  }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+
+    .sidebar {
+      height: 100vh;      
+    }
+
+  }
+
+  @media (min-width: 1024px){
+
+    .sidebar {
+      height: 100vh;      
+    }
+
   }

@@ -1,0 +1,59 @@
+.animated-text-wrapper {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .animated-text {
+    word-break: break-word; /* شکستن کلمات طولانی */
+    white-space: normal;
+    font-size: 1.2rem;
+    overflow: hidden;
+    margin: 0 auto;
+    // font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.70);
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    animation: animated-text 4s steps(29, end) 1s 1 normal both,
+               animated-cursor 600ms steps(29, end) infinite;
+  }
+
+
+  .animated-text {
+    background-color: #123E59;
+    // width: 5px; /* عرض باکس */
+    height: auto; /* ارتفاع به صورت خودکار */
+    padding: 5px 5px; /* حاشیه داخلی */
+    position: absolute; /* موقعیت‌دهی مطلق */
+    top: 170px; /* فاصله از انتهای صفحه */
+    left: 0; /* چسبیدن به سمت چپ */
+    margin: 0; /* حذف حاشیه‌ها */
+    padding-left: 65px;
+    border-top-right-radius: 8px; /* گرد کردن لبه بالای سمت راست */
+    border-bottom-right-radius: 8px; /* گرد کردن لبه پایین سمت راست */
+    text-align: center; /* مرکز کردن متن */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ایجاد سایه */
+    z-index: 10; /* اطمینان از نمایش بالاتر */
+  }
+  
+  
+  /* انیمیشن متن */
+  @keyframes animated-text {
+    from { width: 0; }
+    to { width: 472px; } /* طول نهایی متن */
+  }
+  
+  /* انیمیشن مکان‌نما */
+  @keyframes animated-cursor {
+    from { border-right-color: rgba(0, 255, 0, 0.75); }
+    to { border-right-color: transparent; }
+  }
+  
+  /* کلاس برای نمایش متن نهایی */
+  .animated-text.show {
+    width: auto;
+    border-right: none; /* حذف مکان‌نما */
+    animation: animated-text 4s steps(29, end) forwards, animated-cursor 600ms steps(29, end) infinite; /* انیمیشن روی متن نهایی */
+  }
+  
