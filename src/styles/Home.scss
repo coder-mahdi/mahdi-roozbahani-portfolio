@@ -5,10 +5,20 @@
 }
 
 .text-slide-container{
-display: flex;
-flex-wrap: wrap;
+  display: flex;
+  // flex-direction: column; /* قرار دادن عناصر در یک ردیف */
+  gap: 20px;
 
 }
+
+.content-area {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between; /* تنظیم فاصله و توزیع عناصر */
+  align-items: flex-start; 
+}
+
 
 .home-page {
     // display: flex;
@@ -39,13 +49,19 @@ flex-wrap: wrap;
   //   display: flex;
   //   flex-wrap: wrap;
   // }
-  // .welcome-message {
-  
-  //   font-size: 1.2em;
-  //   // width: 350px; /* عرض باکس */
-  //   margin-top: 5px; /* فاصله از نوار "Hello" */
-  //   text-align: left; /* چپ‌چین کردن متن */
-  // }
+
+  .welcome-message-wrapper{
+    margin-top: 348px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .welcome-message {
+    font-size: 1.2em;
+    // width: 350px; /* عرض باکس */
+    margin-top: 5px; /* فاصله از نوار "Hello" */
+    text-align: left; /* چپ‌چین کردن متن */
+  }
   
   
 

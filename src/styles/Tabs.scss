@@ -1,13 +1,13 @@
 .tabs-wrapper {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   top: 0;
   left: 0;
-  z-index: 10; /* اصلاح z-index برای هماهنگی */
+  z-index: 10; 
 }
 
 .overlay {
@@ -65,7 +65,7 @@
 .tabs-content {
   position: absolute;
   top: 50%; /* تنظیم هم‌راستایی عمودی */
-  right: 100px;
+  right: 50px;
   transform: translateY(-50%);
   z-index: 30; /* بالاتر از لایه تیره */
   background-color: #ffffff;
