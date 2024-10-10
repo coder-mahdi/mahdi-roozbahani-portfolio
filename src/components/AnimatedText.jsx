@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/AnimatedText.scss'; // فایل استایل را اضافه کنید
+import '../styles/AnimatedText.scss'; 
 
 function AnimatedText({ finalMessage, animationDuration = 4 }) {
   const [showText, setShowText] = useState(false);
@@ -7,7 +7,7 @@ function AnimatedText({ finalMessage, animationDuration = 4 }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowText(true);
-    }, 500); // تاخیر برای شروع انیمیشن
+    }, 500); 
     return () => clearTimeout(timer);
   }, []);
 

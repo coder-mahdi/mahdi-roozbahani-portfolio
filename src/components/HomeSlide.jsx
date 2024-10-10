@@ -43,6 +43,8 @@ function HomeSlide() {
             </div>
           </div>
 
+
+
           <button className="prev-button" onClick={prevSlide}>
             Previous
           </button>

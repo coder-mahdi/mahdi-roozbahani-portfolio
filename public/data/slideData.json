@@ -2,22 +2,22 @@
     "slides": [
       {
         "id": 1,
-        "title": "Project One",
-        "image": "/images/project1.jpg",
-        "text": "This is a short description of Project One.",
+        "title": "35mm-app",
+        "image": "/images/movie-project.png",
+        "text": "The Movie App project was built using React and integrated with a database to manage film data efficiently. This application allows users to browse, add, and manage their favorite movies seamlessly. Additional features include a dynamic UI and interactive components, enhancing user experience.",
         "link": "/project1"
       },
       {
         "id": 2,
         "title": "Project Two",
-        "image": "/images/project2.jpg",
+        "image": "/images/movie-project.png",
         "text": "This is a short description of Project Two.",
         "link": "/project2"
       },
       {
         "id": 3,
         "title": "Project Three",
-        "image": "/images/project3.jpg",
+        "image": "/images/movie-project.png",
         "text": "This is a short description of Project Three.",
         "link": "/project3"
       }

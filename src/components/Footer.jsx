@@ -11,7 +11,7 @@ function Footer() {
   }, []);
 
   return (
-    <footer style={{ textAlign: "center", padding: "10px", }}>
+    <footer>
       <p>{footerMessage}</p>
     </footer>
   );

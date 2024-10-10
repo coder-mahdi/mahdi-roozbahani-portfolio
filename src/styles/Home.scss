@@ -1,28 +1,38 @@
 @import 'Sidebar.scss';
 
 .home-page {
+  min-height: 100vh; /* اطمینان از اینکه محتوای صفحه حداقل ارتفاع صفحه را پوشش دهد */
+}
+
+.text-slide-container{
+display: flex;
+flex-wrap: wrap;
+
+}
+
+.home-page {
     // display: flex;
     // flex-direction: column;
-    min-height: 100vh; // ارتفاع کل صفحه
-    background-color: #EBEBF2; // رنگ پس‌زمینه
+    // min-height: 100vh; // ارتفاع کل صفحه
+    // background-color: #EBEBF2; // رنگ پس‌زمینه
   }
   
-  .main-content {
-    // display: flex;
-    justify-content: space-between;
-    flex: 1;
-    padding: 20px;
-    margin-left: 70px;
-  }
+  // .main-content {
+  // //   // display: flex;
+  // //   justify-content: space-between;
+  // //   flex: 1;
+  // //   padding: 20px;
+  // //   margin-left: 70px;
+  // // }
   
   .content-area {
-    flex: 2;
-    // display: flex;
-    // flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    text-align: center;
+    // flex: 2;
+    // // display: flex;
+    // // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // margin: 0 auto;
+    // text-align: center;
   }
   
   // .text-slide-container{
@@ -30,32 +40,13 @@
   //   flex-wrap: wrap;
   // }
   .welcome-message {
-    font-family: 'Comic Neue', cursive; // تنظیم فونت برای متن خوش‌آمدگویی
+  
     font-size: 1.2em;
-    color: #333;
-    width: 350px; /* عرض باکس */
-    margin-top: 120px; /* فاصله از نوار "Hello" */
+    // width: 350px; /* عرض باکس */
+    margin-top: 5px; /* فاصله از نوار "Hello" */
     text-align: left; /* چپ‌چین کردن متن */
   }
   
-  
-  // .animated-text {
-  //   color: #EBEBF2;
-  //   background-color: #123E59;
-  //   // width: 5px; /* عرض باکس */
-  //   height: auto; /* ارتفاع به صورت خودکار */
-  //   padding: 15px 20px; /* حاشیه داخلی */
-  //   position: absolute; /* موقعیت‌دهی مطلق */
-  //   top: 250px; /* فاصله از انتهای صفحه */
-  //   left: 0; /* چسبیدن به سمت چپ */
-  //   margin: 0; /* حذف حاشیه‌ها */
-  //   padding-left: 80px;
-  //   border-top-right-radius: 8px; /* گرد کردن لبه بالای سمت راست */
-  //   border-bottom-right-radius: 8px; /* گرد کردن لبه پایین سمت راست */
-  //   text-align: center; /* مرکز کردن متن */
-  //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ایجاد سایه */
-  //   z-index: 10; /* اطمینان از نمایش بالاتر */
-  // }
   
 
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -98,36 +89,36 @@
 // }
 
 /* تنظیم عرض و ارتفاع بخش‌های داخلی */
-.home-slide-wrapper {
-  flex: 1;
-  max-width: 50%; /* حداکثر 50% عرض برای حالت عادی */
-}
+// .home-slide-wrapper {
+//   flex: 1;
+//   max-width: 50%; /* حداکثر 50% عرض برای حالت عادی */
+// }
 
-.animated-text {
-  flex: 1;
-  max-width: 50%; /* حداکثر 50% عرض برای حالت عادی */
-}
+// .animated-text {
+//   flex: 1;
+//   max-width: 50%; /* حداکثر 50% عرض برای حالت عادی */
+// }
 
-.welcome-message-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px; /* فاصله بین بخش‌های بالا و پیام خوش‌آمدگویی */
-}
+// .welcome-message-wrapper {
+//   display: flex;
+//   justify-content: center;
+//   margin-top: 20px; /* فاصله بین بخش‌های بالا و پیام خوش‌آمدگویی */
+// }
 
-.welcome-message {
-  text-align: center;
-  font-size: 1.2rem;
-}
+// .welcome-message {
+//   text-align: center;
+//   font-size: 1.2rem;
+// }
 
 
-.text-slide-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px; /* فاصله بین انیمیشن و اسلاید */
-  flex-wrap: wrap; /* اضافه کردن flex-wrap برای تبدیل به حالت ستونی */
-  width: 100%; /* اطمینان از استفاده کامل از عرض */
-}
+// .text-slide-container {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   gap: 30px; /* فاصله بین انیمیشن و اسلاید */
+//   flex-wrap: wrap; /* اضافه کردن flex-wrap برای تبدیل به حالت ستونی */
+//   width: 100%; /* اطمینان از استفاده کامل از عرض */
+// }
 
 /* تنظیمات داخلی برای هر بخش */
 // .animated-text,

@@ -25,7 +25,6 @@ function Home() {
     <div className="home-page">
       <Header />
       <div className="main-content">
-        <Sidebar />
         <div className="content-area">
           <div className="text-slide-container"> {/* قرار دادن انیمیشن و اسلاید در یک div */}
             <AnimatedText finalMessage={finalMessage} duration={400} />
@@ -37,6 +36,7 @@ function Home() {
             <p className="welcome-message">{welcomeMessage}</p>
           </div>
         </div>
+        <Sidebar />
         <Tabs />
       </div>
       <Footer />

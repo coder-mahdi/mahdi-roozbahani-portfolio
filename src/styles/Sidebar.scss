@@ -1,20 +1,22 @@
 .sidebar {
-    display: flex;
-    align-items: center;
-    padding: 0;       
-    margin: 0;        
-    background: #fff;
-    height: 180vh;     
-    width: 80px;      
-    position: fixed;  
-    top: 0;
-    left: 0;           
-  }
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  height: 100vh; /* تغییر به 100vh برای پوشش کل ارتفاع صفحه */
+  width: 50px;
+  position: fixed; /* استفاده از fixed برای ثابت کردن در بالا */
+  top: 0;          /* تنظیم مکان از بالای صفحه */
+  left: 0;         /* چسبیده به سمت چپ */
+  z-index: 2;      /* اطمینان از اینکه روی سایر محتواها قرار بگیرد */
+}
+
 
   .sidebar ul {
     list-style-type: none; 
     padding-top: 150px;
-    padding-left: 25px;
+    padding-left: 10px;
     display: flex;                // تبدیل به Flexbox
     flex-direction: column;        // جهت‌گیری عمودی
     justify-content: space-between; // توزیع فاصله بین آیکون‌ها
