@@ -15,12 +15,7 @@
   // align-items: flex-start; 
 }
 
-// .text-slide-container{
-//   display: flex;
-//   flex-direction: column; /* قرار دادن عناصر در یک ردیف */
-//   gap: 20px;
 
-// }
 
 .content-area {
   margin-top: 166px;
@@ -31,22 +26,32 @@
   // align-items: flex-start; 
 }
 
+
+// wellcom message
+
   .welcome-message-wrapper{
     margin-left: 100px;
     margin-right: 70px;
-    // margin-top: 355px;
-    // position: absolute;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
+
   }
+
   .welcome-message {
     font-size: 1.2em;
-    margin-top: 15px; /* فاصله از نوار "Hello" */
-    text-align: left; /* چپ‌چین کردن متن */
-
-    //
-    display: inline-block;
+    margin-top: 15px;
+    text-align: left;
+    white-space: pre-wrap;
+    border-right: 2px solid rgba(255, 255, 255, 0.75); /* مکان‌نما */
+    animation: blinkingCursor 500ms steps(50) infinite normal;
   }
+  
+  @keyframes blinkingCursor {
+    from { border-right-color: rgba(255, 255, 255, 0.75); }
+    to { border-right-color: transparent; }
+  }
+
+
+
+  // Buttons
 
   .buttons-wrapper{
     font-size: 50px;
@@ -61,6 +66,24 @@
     transform: translate(25%);
   }
   
+
+  .key-animation {
+    font-size: 1em; /* اندازه‌ی متن برای دکمه */
+    display: inline-block;
+    letter-spacing: -0.05em;
+    transition: transform 0.2s;
+    animation: pressDown 2s infinite; /* افزودن انیمیشن */
+  }
+  
+  @keyframes pressDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px); /* شبیه‌سازی فشار دادن کلید */
+    }
+  }
+  
   
 
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -73,3 +96,15 @@
 
   }
 
+
+
+  .circle-pointer {
+    position: absolute;
+    width: 50px; /* عرض دایره */
+    height: 50px; /* ارتفاع دایره */
+    border: 2px solid rgb(253, 160, 160); /* خط سفید دور دایره */
+    border-radius: 50%; /* برای گرد شدن */
+    pointer-events: none; /* جلوگیری از کلیک روی دایره */
+    box-sizing: border-box;
+    z-index: 1100;
+  }
