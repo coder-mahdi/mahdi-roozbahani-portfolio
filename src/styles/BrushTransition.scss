@@ -1,0 +1,21 @@
+.brush-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #0a0c1b 60%, #B6C5F2); /* رنگ آبی تیره */
+    z-index: 999; /* بالاتر از همه لایه‌ها */
+    animation: brushTransition 3s ease-in-out forwards; /* انیمیشن */
+  }
+  
+  /* انیمیشن براش‌مانند */
+  @keyframes brushTransition {
+    0% {
+      clip-path: circle(150% at 50% 50%); /* دایره‌ای در کل صفحه */
+    }
+    100% {
+      clip-path: circle(0% at 50% 50%); /* به تدریج ناپدید می‌شود */
+    }
+  }
+  

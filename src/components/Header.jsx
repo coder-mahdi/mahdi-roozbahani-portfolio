@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/Header.scss'; // لینک به فایل SCSS برای استایل‌ها
+import '../styles/Header.scss'; 
 
 function Header() {
   const [headerData, setHeaderData] = useState({ title: "", navLinks: [] });

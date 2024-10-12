@@ -1,18 +1,19 @@
 .slide-container {
   position: absolute;
-  top: 70%;
+  top: 80%;
   left: 50%;
   transform: translate(-41%, -50%);
   width: 80vw;
-  height: 50vh;
+  height: 100vh;
   max-width: 600px;
   max-height: 400px;
+  height: 100%; 
 }
 
 .slide {
   position: relative;
   width: 100%; /* عرض 100% از والد */
-  height: 100%; /* ارتفاع 100% از والد */
+/* ارتفاع 100% از والد */
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -23,21 +24,26 @@
   border-radius: 10px;
 }
 
-  .slide-overlay {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  .slide:hover .slide-overlay {
-    opacity: 1; /* نمایش متن هنگام هاور */
-  }
+.slide-overlay {
+  opacity: 1; /* نمایش همیشگی متن */
+  visibility: visible; /* قابل دیدن در همه حالت‌ها */
+  position: relative;
+  top: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 1px;
+  transition: opacity 0.3s ease-in-out;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+
+  // .slide:hover .slide-overlay {
+  //   opacity: 1; /* نمایش متن هنگام هاور */
+  // }
   
   .icon-left,
   .icon-right {
