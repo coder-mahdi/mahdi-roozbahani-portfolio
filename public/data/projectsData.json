@@ -1,0 +1,10 @@
+{
+    "helloMessage": "My Projects",
+
+    "buttons": [
+        {
+          "title": "About",
+          "link": "/about"
+        }
+      ]
+}
