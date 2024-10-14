@@ -1,0 +1,18 @@
+{
+    "helloMessage": "About me",
+    "tabs": [
+      {
+        "title": "My Skills",
+        "content": "Programming: JavaScript, React.js, HTML5, CSS3, SASS\n\nUX and Web Design: UI/UX Design, AdobeXD, Photoshop\n\nLanguage Fluency: Persian, English\n\nKey Soft Skills: Problem-solving, Communication, Attention to detail."
+      },
+      {
+        "title": "My Story",
+        "content": "I was born and raised in a small town in western Iran, but I spent a decade living in Tehran, the capital of Iran. My passion for adventure led me to travel extensively and experience life in various countries and cities across the heart of Africa. After years of exploring new places and cultures, I decided to permanently move to Canada, and I have been living in Vancouver for over a year now. This new chapter in my life has been an exciting journey, and I continue to embrace my love for adventure."
+      },
+      {
+        "title": "My Hobbies",
+        "content": "In my free time, I enjoy kayaking and hiking, activities that allow me to stay connected with nature. I also find great joy in writing stories and playing the traditional instrument, the kamancheh. Additionally, I am passionate about front-end development, a skill I am dedicated to learning and improving. This interest not only fuels my creativity but also offers opportunities for professional growth."
+      }
+    ]
+  }
+  

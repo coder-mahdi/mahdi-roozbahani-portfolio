@@ -1,17 +1,21 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React from 'react';
-import Header from './components/Header.'; 
-import Sidebar from './components/sidebar.';
-import Footer from './components/Footer.';
-import Home from './components/Home.';
+import Home from './components/Home.jsx';
+import About from './components/About';
+import './styles/main.scss';
+
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <Sidebar/>
-      <Footer/>
-      <Home/>
-    </div>
+    <Router>
+    <Routes>
+    <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+
+
+ 
+    </Routes>
+  </Router>
   );
 }
 

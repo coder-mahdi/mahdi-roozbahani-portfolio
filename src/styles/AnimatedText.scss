@@ -1,0 +1,66 @@
+// .animated-text-wrapper {
+//     display: flex;
+//     padding: 20px;
+//     justify-content: center;
+//     align-items: center;
+//   }
+  
+  .animated-text {
+    display: flex;
+    flex-direction: row;
+    // display: inline-block;
+    // // word-break: break-word;
+    // white-space: normal;
+    font-size: 1.2rem;
+    // overflow: hidden;
+    // margin: 0 auto;
+    padding: 10px 10px;
+    padding-left: 50px;
+    // top: 170px; 
+    // left: 0; 
+    // height: auto; 
+    color: rgba(255, 255, 255, 0.70);
+    background-color: #123E59;
+    border-top-right-radius: 8px; 
+    border-bottom-right-radius: 8px; 
+    text-align: center; 
+    z-index: 10; 
+
+  }
+  
+  .text-slide-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // justify-content: center;
+    position: relative;
+  }
+  
+
+
+.animation {
+  height: 50px;
+  overflow: hidden;
+  // margin-left: 1rem;
+}
+
+.animation > div > div {
+  padding: 0.25rem 0.75rem;
+  height: 2.81rem;
+  margin-bottom: 2.81rem;
+  display: inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+
+
+
+@keyframes text-animation {
+  0% {margin-top: 0;} /* پیام دوم */
+  25% {margin-top: 0;} /* نمایش پیام دوم */
+  50% {margin-top: -5.62rem;} /* نمایش پیام سوم */
+  75% {margin-top: -5.62rem;} /* نگه‌داشتن پیام سوم */
+  100% {margin-top: 0;} /* بازگشت به پیام دوم */
+}

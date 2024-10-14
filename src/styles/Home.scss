@@ -1,0 +1,110 @@
+@import 'Sidebar.scss';
+@import 'BrushTransition.scss';
+
+
+.home-page {
+  max-width: 100vh;
+
+}
+
+.main-content{
+  // display: flex;
+  // flex-direction: column;
+  // flex-wrap: wrap;
+  // justify-content: space-between; /* تنظیم فاصله و توزیع عناصر */
+  // align-items: flex-start; 
+}
+
+
+
+.content-area {
+  margin-top: 166px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  // justify-content: space-between; /* تنظیم فاصله و توزیع عناصر */
+  // align-items: flex-start; 
+}
+
+
+// wellcom message
+
+  .welcome-message-wrapper{
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 70px;
+
+  }
+
+  .welcome-message {
+    font-size: 1.2em;
+    text-align: left;
+    white-space: pre-wrap;
+    border-right: 2px solid rgba(255, 255, 255, 0.75); /* مکان‌نما */
+    animation: blinkingCursor 500ms steps(50) infinite normal;
+  }
+  
+  @keyframes blinkingCursor {
+    from { border-right-color: rgba(255, 255, 255, 0.75); }
+    to { border-right-color: transparent; }
+  }
+
+
+
+  // Buttons
+
+  .buttons-wrapper{
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    // bottom: 150px;
+    // margin-top: 20px; /* فاصله مناسب از ولکام مسیج */
+    // position: relative;
+    // margin-top: 5vh;
+    // left: 50%;
+    margin-top: 50px;
+    transform: translate(25%);
+  }
+  
+
+  .key-animation {
+    font-size: 1em; /* اندازه‌ی متن برای دکمه */
+    display: inline-block;
+    letter-spacing: -0.05em;
+    transition: transform 0.2s;
+    animation: pressDown 2s infinite; /* افزودن انیمیشن */
+  }
+  
+  @keyframes pressDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px); /* شبیه‌سازی فشار دادن کلید */
+    }
+  }
+  
+  
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+
+  }
+
+  @media (min-width: 1024px){
+
+    
+
+  }
+
+
+
+  .circle-pointer {
+    position: absolute;
+    width: 50px; /* عرض دایره */
+    height: 50px; /* ارتفاع دایره */
+    border: 2px solid rgb(253, 160, 160); /* خط سفید دور دایره */
+    border-radius: 50%; /* برای گرد شدن */
+    pointer-events: none; /* جلوگیری از کلیک روی دایره */
+    box-sizing: border-box;
+    z-index: 1100;
+  }

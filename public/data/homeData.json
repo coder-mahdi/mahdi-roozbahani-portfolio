@@ -1,6 +1,27 @@
 {
-    "initialMessage": "$#%^*%()@_+_(!%%#$%$^&*@*",
-    "helloMessage": "Hello I am Mahdi Roozbahani",
-    "welcomeMessage": "Welcome to my portfolio website! As a front-end developer, I invite you to explore the projects I’ve completed and learn about my professional and educational journey.\nFeel free to reach out!"
+  
+    "helloMessage": [
+      {
+        "part1": "Hello 👋 I'm",
+        "part2": "Mahdi Roozbahani",
+        "part3": "Web Developer"
+      }
+    ],
+  
+  
+    "welcomeMessage": "Welcome to my portfolio website! As a front-end developer, I invite you to explore the projects I’ve completed and learn about my professional and educational journey.\nFeel free to reach out!",
+    
+  
+
+    "buttons": [
+      {
+        "title": "About",
+        "link": "/about"
+      },
+      {
+        "title": "Projects",
+        "link": "/projects"
+      }
+    ]
   }
   
