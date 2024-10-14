@@ -8,16 +8,22 @@ import '../styles/Home.scss';
 import { motion } from "framer-motion";
 import { useFollowPointer } from "./useFollowPointer";
 import TypewriterText from './TypewriterText.jsx';
+import { Link } from 'react-router-dom';
 
 function Home() {
   const [helloText, setHelloMessage] = useState("");
   const [firstText, setFirstText] = useState("");
   const [secondText, setSecondText] = useState("");
   const [welcomeMessage, setWelcomeMessage] = useState("");
-  const [buttonsData, setButtonsData] = useState([]); 
+  // const [buttonsData, setButtonsData] = useState([]); 
 
   const ref = useRef(null); // مرجع برای المنت
   const { x, y } = useFollowPointer(ref); // استفاده از هوک
+
+  const buttonsData = [
+    { title: "About", link: "/about" },
+    { title: "Projects", link: "/projects" }
+  ]
   
 
   useEffect(() => {
@@ -28,7 +34,7 @@ function Home() {
         setFirstText(data.helloMessage[0].part2);
         setSecondText(data.helloMessage[0].part3);
         setWelcomeMessage(data.welcomeMessage); 
-        setButtonsData(data.buttons); 
+      
       })
       .catch((error) => console.error('Error loading home data:', error));
   }, []);
@@ -71,13 +77,13 @@ function Home() {
   
         <div className="buttons-wrapper">
   {buttonsData.map((button, index) => (
-    <a key={index} href={button.link} className="custom-button">
-      <span className="key-animation">{button.title}</span> {/* متن دکمه */}
-    </a>
+    <Link key={index} to={button.link} className="custom-button">
+      <span className="key-animation">{button.title}</span>
+    </Link>
   ))}
 </div>
 
-  
+
       </div>
   
       <Sidebar />

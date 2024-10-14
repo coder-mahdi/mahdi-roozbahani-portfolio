@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 import '../styles/Header.scss'; 
 
 function Header() {
@@ -12,15 +14,17 @@ function Header() {
 
   return (
     <header className="header">
-      <div className="logo-container">
-        {headerData.logo && (
-          <img
-            src={import.meta.env.BASE_URL + headerData.logo}
-            alt="Logo"
-            className="logo"
-          />
-        )}
-      </div>
+   <div className="logo-container">
+  {headerData.logo && (
+    <Link to="/">
+      <img
+        src={import.meta.env.BASE_URL + headerData.logo}
+        alt="Logo"
+        className="logo"
+      />
+    </Link>
+  )}
+</div>
 
       <nav className="nav-menu">
         {headerData.navLinks.map((link, index) => (
