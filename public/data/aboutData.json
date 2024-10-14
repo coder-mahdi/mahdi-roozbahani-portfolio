@@ -13,6 +13,13 @@
         "title": "My Hobbies",
         "content": "In my free time, I enjoy kayaking and hiking, activities that allow me to stay connected with nature. I also find great joy in writing stories and playing the traditional instrument, the kamancheh. Additionally, I am passionate about front-end development, a skill I am dedicated to learning and improving. This interest not only fuels my creativity but also offers opportunities for professional growth."
       }
+    ],
+
+    "buttons": [
+      {
+        "title": "Projects",
+        "link": "/projects"
+      }
     ]
   }
   

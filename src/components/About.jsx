@@ -7,12 +7,19 @@ import '../styles/About.scss';
 import { motion } from "framer-motion";
 import { useFollowPointer } from "./useFollowPointer";
 import Accordion from './Accordion'; // افزودن کامپوننت اکاردیون
+import { Link } from 'react-router-dom';
+
 
 function About() {
   const [helloText, setHelloMessage] = useState("");
   const [accordionData, setAccordionData] = useState([]); // برای نگهداری داده‌های اکاردیون
   const ref = useRef(null);
   const { x, y } = useFollowPointer(ref);
+
+
+  const buttonsData = [
+    { title: "Projects", link: "/projects" }
+  ]
 
   useEffect(() => {
     fetch('/data/aboutData.json')
@@ -39,6 +46,14 @@ function About() {
           </div>
           {accordionData.length > 0 && <Accordion data={accordionData} />}
         </div>
+
+        <div className="buttons-wrapper">
+  {buttonsData.map((button, index) => (
+    <Link key={index} to={button.link} className="custom-button">
+      <span className="key-animation">{button.title}</span>
+    </Link>
+  ))}
+</div>
 
         <Sidebar />
         <Tabs />
