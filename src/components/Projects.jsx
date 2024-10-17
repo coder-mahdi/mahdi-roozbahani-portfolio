@@ -3,22 +3,20 @@ import Header from './Header.jsx';
 import Sidebar from './Sidebar.jsx';
 import Footer from './Footer.jsx';
 import Tabs from './Tabs.jsx';
-// import '../styles/About.scss';
+import ProjectSlider from './ProjectSlider'; // افزودن ProjectSlider
 import { motion } from "framer-motion";
 import { useFollowPointer } from "./useFollowPointer";
 import { Link } from 'react-router-dom';
-
+import '../styles/Projects.scss'; 
 
 function Projects() {
   const [helloText, setHelloMessage] = useState("");
-  const [accordionData, setAccordionData] = useState([]); // برای نگهداری داده‌های اکاردیون
   const ref = useRef(null);
   const { x, y } = useFollowPointer(ref);
 
-
   const buttonsData = [
-    { title: "Projects", link: "/projects" }
-  ]
+    { title: "About", link: "/about" }
+  ];
 
   useEffect(() => {
     fetch('/data/projectsData.json')
@@ -27,7 +25,7 @@ function Projects() {
         console.log(data);
         setHelloMessage(data.helloMessage);
       })
-      .catch((error) => console.error('Error loading about data:', error));
+      .catch((error) => console.error('Error loading project data:', error));
   }, []);
 
   return (
@@ -42,16 +40,18 @@ function Projects() {
               <div className="hello-text">{helloText}</div>
             </div>
           </div>
-    
+        
+          <ProjectSlider />
+
         </div>
 
         <div className="buttons-wrapper">
-  {buttonsData.map((button, index) => (
-    <Link key={index} to={button.link} className="custom-button">
-      <span className="key-animation">{button.title}</span>
-    </Link>
-  ))}
-</div>
+          {buttonsData.map((button, index) => (
+            <Link key={index} to={button.link} className="custom-button">
+              <span className="key-animation">{button.title}</span>
+            </Link>
+          ))}
+        </div>
 
         <Sidebar />
         <Tabs />

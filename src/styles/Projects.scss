@@ -1,0 +1,88 @@
+.project-slider {
+    position: relative;
+    max-width: 70%;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    overflow: hidden;
+  
+    .slider-wrapper {
+      display: flex;
+      transition: transform 0.5s ease-in-out; /* انیمیشن انتقال */
+    }
+  
+    .slide {
+      min-width: 100%; /* اسلایدها تمام عرض صفحه را می‌گیرند */
+      box-sizing: border-box;
+      text-align: center;
+  
+      .slide-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+  
+      .slide-content {
+        margin-top: 15px;
+        background-color: rgba(0, 0, 0, 0.6); /* پس‌زمینه تیره برای باکس متن */
+        padding: 20px;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        max-width: 80%;
+        margin: 20px auto 0;
+        opacity: 0; /* ابتدا نامرئی است */
+        transform: translateX(100%); /* متن از سمت راست خارج است */
+        animation: slideIn 0.8s ease forwards; /* انیمیشن ورود متن */
+  
+        h3 {
+          font-size: 1.8rem;
+          color: #fff;
+        }
+  
+        p {
+          font-size: 1.2rem;
+          color: #ddd;
+          margin-top: 10px;
+        }
+      }
+    }
+  
+    /* انیمیشن ورود متن */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(100%); /* ورود از سمت راست */
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0); /* به حالت عادی برگردد */
+      }
+    }
+  
+    /* دایره‌های ناوبری */
+    .navigation-dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+  
+      .dot {
+        height: 15px;
+        width: 15px;
+        background-color: #ddd;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &.active {
+          background-color: #333;
+        }
+  
+        &:hover {
+          background-color: #555;
+        }
+      }
+    }
+  }
+  
