@@ -1,0 +1,109 @@
+/* استایل بخش اصلی کانتکت */
+// .content-area {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     padding: 20px;
+//   }
+  
+  /* استایل پیام خوش‌آمدگویی */
+  .welcome-message-wrapper {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 600px;
+    font-size: 1.2rem;
+    color: #333;
+  
+    @media (min-width: 768px) {
+      font-size: 1.4rem;
+    }
+  }
+  
+  /* استایل فرم تماس */
+  .contact-form-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1rem;
+      color: #333;
+    }
+  
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      outline: none;
+  
+      &:focus {
+        border-color: #008CBA;
+      }
+    }
+  
+    textarea {
+      height: 150px;
+      resize: vertical;
+    }
+  }
+  
+  /* استایل دکمه ارسال */
+  .submit-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #008CBA;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #005f73;
+    }
+  }
+  
+  /* پیام موفقیت */
+  .form-success {
+    text-align: center;
+    color: green;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e0f7e7;
+    border-radius: 8px;
+    border: 1px solid #6adf81;
+  }
+  
+  /* تنظیمات عمومی برای متن‌ها و انیمیشن تایپ‌رایت */
+//   .animated-text {
+//     font-size: 2rem;
+//     color: #333;
+//     margin-bottom: 30px;
+//     text-align: center;
+//     white-space: nowrap;
+//   }
+  
+//   @media (min-width: 768px) {
+//     .animated-text {
+//       font-size: 2.5rem;
+//     }
+//   }
+  

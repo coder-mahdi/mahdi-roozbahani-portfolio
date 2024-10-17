@@ -16,19 +16,16 @@
 }
 
 
-.content-area-home{
-  padding-top: 35px;
+
+.content-area {
+    padding-top: 110px;
+//   margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  // justify-content: space-between; /* تنظیم فاصله و توزیع عناصر */
+  // align-items: flex-start; 
 }
-
-
-// .content-area-home {
-//   margin-top: 60px;
-//   display: flex;
-//   flex-direction: column;
-//   flex-wrap: wrap;
-//   // justify-content: space-between; /* تنظیم فاصله و توزیع عناصر */
-//   // align-items: flex-start; 
-// }
 
 
 // wellcom message

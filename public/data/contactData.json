@@ -1,0 +1,15 @@
+{
+    "helloMessage": "contact me",
+    "formLabels": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message"
+    },
+    "welcomeMessage": "I’m excited to hear from you! If you’d like to discuss any of my projects or explore potential opportunities, please don’t hesitate to get in touch. Follow me on social media, send me a message, or drop me an email. I always appreciate your feedback and thoughts!",
+    "buttons": [
+      { "title": "About", "link": "/about" },
+      { "title": "Projects", "link": "/projects" }
+    ]
+  }
+  
