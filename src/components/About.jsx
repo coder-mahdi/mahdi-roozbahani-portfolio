@@ -6,7 +6,7 @@ import Tabs from './Tabs.jsx';
 import '../styles/About.scss';
 import { motion } from "framer-motion";
 import { useFollowPointer } from "./useFollowPointer";
-import Accordion from './Accordion'; // افزودن کامپوننت اکاردیون
+import Accordion from './Accordion'; 
 import { Link } from 'react-router-dom';
 
 
@@ -27,7 +27,7 @@ function About() {
       .then((data) => {
         console.log(data);
         setHelloMessage(data.helloMessage);
-        setAccordionData(data.tabs); // ذخیره داده‌های تب‌ها
+        setAccordionData(data.tabs); 
       })
       .catch((error) => console.error('Error loading about data:', error));
   }, []);

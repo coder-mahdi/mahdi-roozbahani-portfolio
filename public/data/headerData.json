@@ -1,8 +1,10 @@
 {
   "logo": "images/logo.png",
     "navLinks": [
-      { "name": "Home", "link": "#Home" },
-      { "name": "Contact", "link": "#contact" }
+      {
+      "icon":"/images/home.svg", 
+      "link": "/" },
+      { "icon": "/images/contact.svg", "link": "/contact" }
     ]
   }
   

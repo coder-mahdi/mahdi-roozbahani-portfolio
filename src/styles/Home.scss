@@ -3,11 +3,14 @@
 
 
 .home-page {
-  max-width: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
 }
 
 .main-content{
+  flex-grow: 1;
   // display: flex;
   // flex-direction: column;
   // flex-wrap: wrap;
@@ -34,8 +37,9 @@
 // wellcom message
 
   .welcome-message-wrapper{
+    height: 30vh;
     margin-top: 30px;
-    margin-left: 100px;
+    margin-left: 45px;
     margin-right: 70px;
 
   }
@@ -57,19 +61,26 @@
 
   // Buttons
 
-  .buttons-wrapper{
+  // .buttons-wrapper{
+  //   position: fixed;
+  //   font-size: 50px;
+  //   display: flex;
+  //   flex-direction: column;
+  //   margin-top: 50px;
+  // }
+  
+  .buttons-wrapper {
+    // position: fixed;
     font-size: 50px;
     display: flex;
     flex-direction: column;
-    // bottom: 150px;
-    // margin-top: 20px; /* فاصله مناسب از ولکام مسیج */
-    // position: relative;
-    // margin-top: 5vh;
-    // left: 50%;
     margin-top: 50px;
-    transform: translate(25%);
+    width: 200px; /* عرض مشخص */
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
   }
-  
 
   .key-animation {
     font-size: 1em; /* اندازه‌ی متن برای دکمه */

@@ -128,7 +128,7 @@ function Home() {
 
   return (
     <Layout helloText={helloText} buttonsData={buttonsData}>
-      <div className="content-area-home">
+      <main className="content-area-home">
         <div className="text-slide-container">
           <div className="animated-text">
             <div className="hello-text">{helloText}</div> {/* پیام ثابت */}
@@ -146,7 +146,7 @@ function Home() {
         <div className="welcome-message-wrapper">
           <TypewriterText text={welcomeMessage} />
         </div>
-      </div>
+      </main>
     </Layout>
   );
 }

@@ -23,7 +23,7 @@ function SingleProject() {
   }
 
   const buttonsData = [
-    { title: "Go Back", link: "/projects" } // اضافه کردن دکمه برای بازگشت به صفحه پروژه‌ها
+    { title: "Go Back", link: "/projects" } 
   ];
 
   return (

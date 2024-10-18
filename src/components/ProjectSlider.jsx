@@ -22,7 +22,7 @@ function ProjectSlider() {
           setCurrentIndex((prevIndex) =>
             prevIndex === projects.length - 1 ? 0 : prevIndex + 1
           );
-        }, 3000); // هر 3 ثانیه یک اسلاید جابجا شود
+        }, 5000); // هر 3 ثانیه یک اسلاید جابجا شود
   
         return () => clearInterval(interval); // پاک کردن تایمر وقتی کامپوننت از بین برود
       }
@@ -76,7 +76,7 @@ function ProjectSlider() {
           ))}
         </div>
   
-        {/* دایره‌های ناوبری */}
+
         <div className="navigation-dots">
           {projects.map((_, index) => (
             <span

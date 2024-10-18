@@ -32,7 +32,7 @@
 
   .welcome-message-wrapper{
     margin-top: 30px;
-    margin-left: 100px;
+    margin-left: 45px;
     margin-right: 70px;
 
   }
@@ -41,7 +41,7 @@
     font-size: 1.2em;
     text-align: left;
     white-space: pre-wrap;
-    border-right: 2px solid rgba(255, 255, 255, 0.75); /* مکان‌نما */
+    border-right: 2px solid rgba(255, 255, 255, 0.75); 
     animation: blinkingCursor 500ms steps(50) infinite normal;
   }
   
@@ -54,18 +54,18 @@
 
   // Buttons
 
-  .buttons-wrapper{
-    font-size: 50px;
-    display: flex;
-    flex-direction: column;
-    // bottom: 150px;
-    // margin-top: 20px; /* فاصله مناسب از ولکام مسیج */
-    // position: relative;
-    // margin-top: 5vh;
-    // left: 50%;
-    margin-top: 50px;
-    transform: translate(25%);
-  }
+  // .buttons-wrapper{
+  //   font-size: 50px;
+  //   display: flex;
+  //   flex-direction: column;
+  //   // bottom: 150px;
+  //   // margin-top: 20px; /* فاصله مناسب از ولکام مسیج */
+  //   // position: relative;
+  //   // margin-top: 5vh;
+  //   // left: 50%;
+  //   margin-top: 50px;
+  //   transform: translate(25%);
+  // }
   
 
   .key-animation {
