@@ -1,36 +1,53 @@
-import React, { useEffect, useState, useRef } from 'react';
-import Accordion from './Accordion';
-import Layout from './Layout.jsx';  // اضافه کردن Layout
-import '../styles/About.scss';
+import React, { useRef } from 'react';
+import { useLocation } from 'react-router-dom';
+import Header from './Header.jsx';
+import Sidebar from './Sidebar.jsx';
+import Footer from './Footer.jsx';
+import Tabs from './Tabs.jsx';
+import '../styles/Layout.scss'
+import { motion } from 'framer-motion';
+import { useFollowPointer } from './useFollowPointer';
+import { Link } from 'react-router-dom';
 
-function About() {
-  const [helloText, setHelloMessage] = useState("");
-  const [accordionData, setAccordionData] = useState([]);
+function Layout({ children, helloText, buttonsData }) {
   const ref = useRef(null);
-
-  const buttonsData = [
-    { title: "Projects", link: "/projects" }
-  ];
-
-  useEffect(() => {
-    fetch('/data/aboutData.json')
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setHelloMessage(data.helloMessage);
-        setAccordionData(data.tabs); 
-      })
-      .catch((error) => console.error('Error loading about data:', error));
-  }, []);
+  const { x, y } = useFollowPointer(ref);
+  const location = useLocation(); 
 
   return (
-    <Layout helloText={helloText} buttonsData={buttonsData}>
-  
-      <div className="content-area">
-        {accordionData.length > 0 && <Accordion data={accordionData} />}
-      </div>
-    </Layout>
+    <div className="home-page">
+      <Header />
+      <main className="main-content">
+        <motion.div style={{ x, y }} ref={ref} className="circle-pointer"></motion.div>
+
+        <div className="content-area">
+          {location.pathname !== '/' && (
+            <div className="text-slide-container">
+              <div className="animated-text">
+                <div className="hello-text">{helloText}</div>
+              </div>
+            </div>
+          )}
+
+          {children}
+
+
+          <Sidebar />
+          <Tabs />
+        </div>
+          <div className="buttons-wrapper">
+            {buttonsData.map((button, index) => (
+              <Link key={index} to={button.link} className="custom-button">
+                <span className="key-animation">{button.title}</span>
+              </Link>
+            ))}
+          </div>
+
+      </main>
+          <Footer />
+
+    </div>
   );
 }
 
-export default About;
+export default Layout;

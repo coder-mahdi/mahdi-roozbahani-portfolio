@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import Layout from './Layout.jsx';
-import TypewriterText from './TypewriterText.jsx'; // استفاده از TypewriterText
-import '../styles/Contact.scss'; // استایل‌های صفحه کانتکت
+import TypewriterText from './TypewriterText.jsx'; 
+import '../styles/Contact.scss'; 
 
 function Contact() {
-  const [contactData, setContactData] = useState(null); // داده‌های JSON
+  const [contactData, setContactData] = useState(null); 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  // فراخوانی داده‌های JSON از فایل contactData.json
+ 
   useEffect(() => {
     fetch('/data/contactData.json')
       .then((response) => response.json())

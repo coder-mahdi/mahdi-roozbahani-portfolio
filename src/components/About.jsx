@@ -1,25 +1,15 @@
-import React, { useEffect, useState, useRef } from 'react';
-import Header from './Header.jsx';
-import Sidebar from './Sidebar.jsx';
-import Footer from './Footer.jsx';
-import Tabs from './Tabs.jsx';
-import '../styles/About.scss';
-import { motion } from "framer-motion";
-import { useFollowPointer } from "./useFollowPointer";
+import React, { useEffect, useState } from 'react';
+import Layout from './Layout.jsx';
 import Accordion from './Accordion'; 
-import { Link } from 'react-router-dom';
-
+import '../styles/About.scss';
 
 function About() {
   const [helloText, setHelloMessage] = useState("");
-  const [accordionData, setAccordionData] = useState([]); // برای نگهداری داده‌های اکاردیون
-  const ref = useRef(null);
-  const { x, y } = useFollowPointer(ref);
-
+  const [accordionData, setAccordionData] = useState([]); 
 
   const buttonsData = [
     { title: "Projects", link: "/projects" }
-  ]
+  ];
 
   useEffect(() => {
     fetch('/data/aboutData.json')
@@ -33,33 +23,9 @@ function About() {
   }, []);
 
   return (
-    <div className="home-page">
-      <Header />
-      <div className="main-content">
-        <motion.div style={{ x, y }} ref={ref} className="circle-pointer"></motion.div>
-
-        <div className="content-area">
-          <div className="text-slide-container">
-            <div className="animated-text">
-              <div className="hello-text">{helloText}</div>
-            </div>
-          </div>
-          {accordionData.length > 0 && <Accordion data={accordionData} />}
-        </div>
-
-        <div className="buttons-wrapper">
-  {buttonsData.map((button, index) => (
-    <Link key={index} to={button.link} className="custom-button">
-      <span className="key-animation">{button.title}</span>
-    </Link>
-  ))}
-</div>
-
-        <Sidebar />
-        <Tabs />
-        <Footer />
-      </div>
-    </div>
+    <Layout helloText={helloText} buttonsData={buttonsData}>
+      {accordionData.length > 0 && <Accordion data={accordionData} />}
+    </Layout>
   );
 }
 

@@ -58,13 +58,13 @@
     font-weight: lighter;
     position: relative;
     padding: 10px;
-    z-index: 2000;
+    z-index: 2;
     border-radius: 4px;
     transition: all .2s ease-in;
   }
   
   .title-text {
-    margin-left: 40px;
+    margin-left: auto;
   }
   
   .title:hover {

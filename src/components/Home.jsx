@@ -128,16 +128,16 @@ function Home() {
 
   return (
     <Layout helloText={helloText} buttonsData={buttonsData}>
-      <main className="content-area-home">
+      <div className="content-area-home">
         <div className="text-slide-container">
           <div className="animated-text">
-            <div className="hello-text">{helloText}</div> {/* پیام ثابت */}
+            <div className="hello-text">{helloText}</div> 
             <section className="animation">
               <div className="second">
-                <div>{firstText}</div> {/* پیام دوم */}
+                <div>{firstText}</div> 
               </div>
               <div className="third">
-                <div>{secondText}</div> {/* پیام سوم */}
+                <div>{secondText}</div>
               </div>
             </section>
           </div>
@@ -146,7 +146,7 @@ function Home() {
         <div className="welcome-message-wrapper">
           <TypewriterText text={welcomeMessage} />
         </div>
-      </main>
+      </div>
     </Layout>
   );
 }
