@@ -66,7 +66,7 @@ function ProjectSlider() {
               />
               <div className="slide-content">
                 <h3>{project.title}</h3>
-                <p>{project.description}</p>
+                <p>{project.shortDescription}</p>
   
                 <Link to={`/singleproject/${project.id}`} className="learn-more-btn">
                   Learn More

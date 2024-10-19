@@ -1,7 +1,5 @@
 .tabs-wrapper {
-  // position: absolute;
   width: 100%;
-  // height: 120vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -16,20 +14,19 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* رنگ تیره */
+  background: rgba(0, 0, 0, 0.7);
   display: none;
-  z-index: 15; /* اطمینان از اینکه زیر محتوای تب‌ها باشد */
+  z-index: 15;
 }
 
 .overlay.show {
-  display: block; /* نمایش لایه تیره */
+  display: block; 
 }
 
 .tabs-container {
-  // position: relative; /* استفاده از relative به‌جای absolute */
   top: 0;
   right: 0;
-  z-index: 20; /* بالاتر از لایه تیره */
+  z-index: 20; 
 }
 
 .tabs-buttons {
@@ -40,7 +37,7 @@
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  z-index: 25; /* بالاتر از لایه تیره */
+  z-index: 25; 
 }
 
 .tab-button {
@@ -64,10 +61,10 @@
 
 .tabs-content {
   position: absolute;
-  top: 50%; /* تنظیم هم‌راستایی عمودی */
+  top: 50%; 
   right: 50px;
   transform: translateY(-50%);
-  z-index: 30; /* بالاتر از لایه تیره */
+  z-index: 30; 
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -77,46 +74,56 @@
 .tab-content.show {
   opacity: 1;
   visibility: visible;
-  z-index: 35; /* بالاتر از لایه تیره */
+  z-index: 35; 
 }
 
 
-/* تعریف انیمیشن برای ورود از سمت راست */
+
 @keyframes slideInRight {
   from {
-    transform: translateX(100%); /* شروع از بیرون صفحه از سمت راست */
-    opacity: 0; /* شروع با عدم نمایش */
+    transform: translateX(100%); 
+    opacity: 0; 
   }
   to {
-    transform: translateX(0); /* توقف در محل نهایی */
-    opacity: 1; /* نمایش کامل */
+    transform: translateX(0); 
+    opacity: 1; 
   }
 }
 
-/* تنظیم انیمیشن برای محتوای تب‌ها */
+
 .tabs-content .tab-content {
-  animation: slideInRight 0.7s ease-out; /* اعمال انیمیشن */
+  animation: slideInRight 0.7s ease-out; 
 }
 
-/* اطمینان از نمایش در محل صحیح */
+
 .tab-content {
-  position: relative; /* تنظیم موقعیت‌دهی */
-  opacity: 0; /* عدم نمایش پیش‌فرض */
+  position: relative; 
+  opacity: 0; 
 }
 
 .tab-content.show {
-  opacity: 1; /* نمایش کامل در حالت نهایی */
+  opacity: 1; 
 }
 
 
 .tab-content {
-  width: 250px; /* تنظیم عرض */
-  height: auto; /* ارتفاع به‌صورت خودکار */
-  padding: 15px; /* حاشیه داخلی */
-  margin: 10px; /* فاصله از اطراف */
-  border: 1px solid #ddd; /* ایجاد یک خط حاشیه */
-  border-radius: 10px; /* گرد کردن لبه‌ها */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ایجاد سایه */
-  background-color: #f9f9f9; /* رنگ پس‌زمینه */
-  transition: all 0.5s ease-in-out; /* انیمیشن کلی */
+  width: 250px; 
+  height: auto; 
+  padding: 15px; 
+  margin: 10px; 
+  border: 1px solid #ddd; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  background-color: #f9f9f9; 
+  transition: all 0.5s ease-in-out;
+}
+
+
+@media (min-width: 768px) {
+  .tab-button{
+    font-size: 1.1rem;
+  }
+  .tabs-content{
+    right:60px;
+  }
 }

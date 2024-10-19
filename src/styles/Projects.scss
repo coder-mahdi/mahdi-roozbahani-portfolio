@@ -1,3 +1,11 @@
+.learn-more-btn{
+  border-radius: 5px;
+  padding: 10px 10px;
+  color: white;
+  background-color: #123E59;
+}
+
+
 .project-slider {
     position: relative;
     max-width: 70%;
@@ -8,11 +16,11 @@
   
     .slider-wrapper {
       display: flex;
-      transition: transform 0.5s ease-in-out; /* انیمیشن انتقال */
+      transition: transform 0.5s ease-in-out;
     }
   
     .slide {
-      min-width: 100%; /* اسلایدها تمام عرض صفحه را می‌گیرند */
+      min-width: 100%; 
       box-sizing: border-box;
       text-align: center;
   
@@ -25,15 +33,15 @@
   
       .slide-content {
         margin-top: 15px;
-        background-color: rgba(0, 0, 0, 0.6); /* پس‌زمینه تیره برای باکس متن */
+        background-color: rgba(0, 0, 0, 0.6);
         padding: 20px;
         border: 2px solid #fff;
         border-radius: 10px;
         max-width: 80%;
-        margin: 20px auto 0;
-        opacity: 0; /* ابتدا نامرئی است */
-        transform: translateX(100%); /* متن از سمت راست خارج است */
-        animation: slideIn 0.8s ease forwards; /* انیمیشن ورود متن */
+        margin: 5px auto 0;
+        opacity: 0;
+        transform: translateX(100%); 
+        animation: slideIn 0.8s ease forwards; 
   
         h3 {
           font-size: 1.8rem;
@@ -48,19 +56,19 @@
       }
     }
   
-    /* انیمیشن ورود متن */
+  
     @keyframes slideIn {
       from {
         opacity: 0;
-        transform: translateX(100%); /* ورود از سمت راست */
+        transform: translateX(100%); 
       }
       to {
         opacity: 1;
-        transform: translateX(0); /* به حالت عادی برگردد */
+        transform: translateX(0);
       }
     }
   
-    /* دایره‌های ناوبری */
+ 
     .navigation-dots {
       display: flex;
       justify-content: center;

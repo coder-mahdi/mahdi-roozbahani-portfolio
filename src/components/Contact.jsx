@@ -28,36 +28,36 @@ function Contact() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ name, email, message }), // ارسال اطلاعات فرم
+      body: JSON.stringify({ name, email, message }), 
     })
       .then((response) => response.json())
       .then((data) => {
         console.log('Success:', data);
-        setSubmitted(true); // پیام موفقیت بعد از ارسال فرم
+        setSubmitted(true); 
       })
       .catch((error) => {
         console.error('Error:', error);
       });
   };
 
-  // بررسی اینکه آیا داده‌ها هنوز بارگذاری نشده‌اند
+  
   if (!contactData) {
     return <div>Loading...</div>;
   }
 
   return (
     <Layout helloText={contactData.helloMessage} buttonsData={contactData.buttons}>
-      <div className="content-area">
-        {/* نمایش پیام خوش‌آمدگویی با تایپ‌رایت */}
+      <div className="conten-main">
+    
         <div className="welcome-message-wrapper">
-          <TypewriterText text={contactData.welcomeMessage} /> {/* پیام خوش‌آمدگویی */}
+          <TypewriterText text={contactData.welcomeMessage} /> 
         </div>
 
-        {/* فرم تماس */}
+
         <div className="contact-form-wrapper">
           {submitted ? (
             <div className="form-success">
-              {contactData.successMessage} {/* پیام موفقیت از JSON */}
+              {contactData.successMessage} 
             </div>
           ) : (
             <form className="contact-form" onSubmit={handleSubmit}>

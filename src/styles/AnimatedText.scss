@@ -65,3 +65,12 @@
   75% {margin-top: -5.62rem;} /* نگه‌داشتن پیام سوم */
   100% {margin-top: 0;} /* بازگشت به پیام دوم */
 }
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .animated-text{
+ font-size: 1.9rem;
+}
+
+}

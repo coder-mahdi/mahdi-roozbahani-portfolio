@@ -71,9 +71,13 @@ function Header() {
       {/* منوی دسکتاپ */}
       <nav className="nav-menu desktop-nav">
         {headerData.navLinks.map((link, index) => (
-          <Link key={index} to={link.link} className="nav-link">
-            {link.name}
-          </Link>
+        <Link key={index} to={link.link} className="nav-link">
+        {link.icon ? (
+          <img src={link.icon} alt="nav icon" className="nav-icon" />
+        ) : (
+          <span>{link.name}</span>
+        )}
+      </Link>
         ))}
       </nav>
 

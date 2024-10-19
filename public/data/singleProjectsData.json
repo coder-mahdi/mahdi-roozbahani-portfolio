@@ -1,19 +1,13 @@
 {
-    "projects": [
-      {
-        "id": 1,
-        "title": "Project 1",
-        "description": "This is the detailed description of Project 1.",
-        "image": "/images/project1.png",
-        "additionalInfo": "Here are some more details about Project 1, including technical aspects, challenges, and outcomes."
-      },
-      {
-        "id": 2,
-        "title": "Project 2",
-        "description": "This is the detailed description of Project 2.",
-        "image": "/images/project2.png",
-        "additionalInfo": "Here are some more details about Project 2, including technical aspects, challenges, and outcomes."
-      }
-    ]
+  "buttons": [
+    {
+      "title": "About",
+      "link": "/about"
+    },
+    {
+      "title": "Projects",
+      "link": "/projects"
+    }
+  ]
   }
   

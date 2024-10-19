@@ -4,11 +4,12 @@ import Layout from './Layout.jsx';
 import '../styles/SingleProject.scss'; 
 
 function SingleProject() {
-  const { projectId } = useParams(); // دریافت ID پروژه از URL
+  const { projectId } = useParams(); 
   const [project, setProject] = useState(null);
+  const [buttonsData, setButtonsData] = useState([]);
 
   useEffect(() => {
-    // بارگذاری اطلاعات پروژه از فایل JSON
+
     fetch('/data/projectsData.json')
       .then((response) => response.json())
       .then((data) => {
@@ -18,18 +19,23 @@ function SingleProject() {
       .catch((error) => console.error('Error loading project data:', error));
   }, [projectId]);
 
+  useEffect(() => {
+    fetch('/data/singleProjectsData.json')
+      .then((response) => response.json())
+      .then((data) => {
+        setButtonsData(data.buttons || []); 
+      })
+      .catch((error) => console.error('Error loading buttons data:', error));
+  }, []);
+
   if (!project) {
     return <div>Loading...</div>;
   }
 
-  const buttonsData = [
-    { title: "Go Back", link: "/projects" } 
-  ];
 
   return (
     <Layout helloText={project.title} buttonsData={buttonsData}>
       <div className="single-project">
-        <h2>{project.title}</h2>
         <img src={project.image} alt={project.title} className="project-image" />
         <p>{project.detailedDescription}</p>
         <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className="visit-site-btn">

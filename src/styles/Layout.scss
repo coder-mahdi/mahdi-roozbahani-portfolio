@@ -52,6 +52,29 @@
 
 
 
+  .buttons-wrapper {
+    // position: fixed;
+    align-items: center;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    // width: 200px;
+    // margin-left: auto;
+    // margin-right: auto;
+    left: 0;
+    right: 0;
+  }
+
+  .key-animation {
+    font-size: 1em; 
+    display: inline-block;
+    letter-spacing: -0.05em;
+    transition: transform 0.2s;
+    animation: pressDown 2s infinite; 
+  }
+
+
   // Buttons
 
   // .buttons-wrapper{
@@ -68,13 +91,13 @@
   // }
   
 
-  .key-animation {
-    font-size: 1em; /* اندازه‌ی متن برای دکمه */
-    display: inline-block;
-    letter-spacing: -0.05em;
-    transition: transform 0.2s;
-    animation: pressDown 2s infinite; /* افزودن انیمیشن */
-  }
+  // .key-animation {
+  //   font-size: 1em; /* اندازه‌ی متن برای دکمه */
+  //   display: inline-block;
+  //   letter-spacing: -0.05em;
+  //   transition: transform 0.2s;
+  //   animation: pressDown 2s infinite; /* افزودن انیمیشن */
+  // }
   
   @keyframes pressDown {
     0%, 100% {
@@ -88,6 +111,15 @@
   
 
   @media (min-width: 768px) and (max-width: 1024px) {
+
+.buttons-wrapper{
+  font-size: 3.9rem;
+  margin-top: 70px;
+}
+.key-animation{
+  margin-top: 10px;
+}
+
 
   }
 

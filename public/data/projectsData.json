@@ -3,18 +3,19 @@
     "projects": [
         {
             "id": 1,
-            "title": "Project 1",
-            "shortDescription": "This is a short description of Project 1.",
-            "image": "/images/project1.png",
-            "detailedDescription": "This is the detailed description of Project 1 with more information.",
+            "title": "Movie database",
+            "shortDescription": "This is a short description of Project 1.This is a short description of Project 1",
+            "image": "/images/Project1.png",
+            "detailedDescription": "This is the detailed description of Project 1 with more information.This is the detailed description of Project 1 with more information.This is the detailed description of Project 1 with more information.",
             "websiteLink": "https://www.project1.com"
           },
       {
         "id": 2,
         "title": "Project 2",
-        "description": "This is the second project description.",
+        "shortDescription": "This is a short description of Project 1.",
         "image": "/images/Project2.png",
-        "detailedDescription": "This is the detailed description of Project 1 with more information."
+        "detailedDescription": "This is the detailed description of Project 1 with more information.This is the second project description.This is the second project descriptionThis is the second project description",
+        "websiteLink": "https://www.project1.com"      
       },
       {
         "title": "Project 3",
@@ -22,6 +23,7 @@
         "image": "/images/Project3.jpg"
       }
     ],
+
     "buttons": [
       {
         "title": "About",
