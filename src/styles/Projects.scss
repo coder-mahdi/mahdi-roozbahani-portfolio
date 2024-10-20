@@ -13,6 +13,20 @@
     margin-left: 50px;
     margin-right: 50px;
     overflow: hidden;
+
+
+    @media (min-width: 768px) {
+     
+    max-width: 900px;
+    margin-left: 80px;
+    margin-right: 100px;
+      
+    }
+
+    @media (min-width: 1024px) {
+        max-width: none;
+    }
+  
   
     .slider-wrapper {
       display: flex;
@@ -55,6 +69,11 @@
         }
       }
     }
+
+  
+  
+  
+    
   
   
     @keyframes slideIn {

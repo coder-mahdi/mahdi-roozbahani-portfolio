@@ -106,7 +106,12 @@
   max-width: 900px;
   margin-right: 100px;
   margin-top: 20px;
-  // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .desktop-nav {
+    max-width: none; 
+  }
 }
 
 

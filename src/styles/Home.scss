@@ -9,14 +9,24 @@
 
 }
 
+@media (min-width: 1024px) {
+  .home-page {
+    max-width: none; 
+  }
+  .content-area-home {
+    padding-top: 0;
+  }
+  
+}
+
 .main-content{
   flex-grow: 1;
 }
 
 
-.content-area-home{
-  padding-top: 35px;
-}
+// .content-area-home{
+//   padding-top: 35px;
+// }
 
 
 
@@ -72,7 +82,7 @@
 
     .welcome-message-wrapper{
     max-width: 900px;
-    margin-left: 200px;
+    margin-left: 70px;
     margin-top: 70px;
     font-size: 1.8rem;
  }
@@ -81,7 +91,9 @@
 
   @media (min-width: 1024px){
 
-    
+    .welcome-message-wrapper{
+      margin-left: 15rem;
+   }
 
   }
 

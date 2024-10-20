@@ -17,11 +17,21 @@
     max-width: 600px;
     font-size: 1.2rem;
     color: #333;
+  }
   
     @media (min-width: 768px) {
-      font-size: 1.4rem;
+      .welcome-message-wrapper {
+        font-size: 1.4rem;
     }
   }
+
+
+  @media (min-width: 1024px) {
+    .welcome-message-wrapper {
+      font-size: 1.6rem;
+      margin-right: 70px;
+  }
+}
   
 
   .contact-form-wrapper {

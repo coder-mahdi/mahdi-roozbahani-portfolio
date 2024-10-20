@@ -1,13 +1,4 @@
-// footer {
-//   margin-top: 60px;
-//   display: flex;
-//   justify-content: center;
-// //   bottom: 0;
-// // //  position: fixed;
-// //  left: 50%;
-// //  transform:translateX(-50%);
 
-//   }
   
 footer {
   margin-bottom: 30px;
@@ -16,4 +7,11 @@ footer {
   text-align: center;
   // padding: 10px 0;
   position: relative;
+}
+
+
+@media (min-width: 1024px){
+  footer {
+    margin-bottom: 0;
+  }
 }
