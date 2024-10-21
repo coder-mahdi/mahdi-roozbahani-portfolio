@@ -4,9 +4,8 @@
 
 .home-page {
   max-width: 100vh;
+
 }
-
-
 
 .main-content{
   // display: flex;
@@ -31,25 +30,25 @@
 
 // wellcom message
 
-  .welcome-message-wrapper{
-    margin-top: 30px;
-    margin-left: 45px;
-    margin-right: 70px;
+  // .welcome-message-wrapper{
+  //   margin-top: 30px;
+  //   margin-left: 45px;
+  //   margin-right: 70px;
 
-  }
+  // }
 
-  .welcome-message {
-    font-size: 1.2em;
-    text-align: left;
-    white-space: pre-wrap;
-    border-right: 2px solid rgba(255, 255, 255, 0.75); 
-    animation: blinkingCursor 500ms steps(50) infinite normal;
-  }
+  // .welcome-message {
+  //   font-size: 1.2em;
+  //   text-align: left;
+  //   white-space: pre-wrap;
+  //   border-right: 2px solid rgba(255, 255, 255, 0.75); 
+  //   animation: blinkingCursor 500ms steps(50) infinite normal;
+  // }
   
-  @keyframes blinkingCursor {
-    from { border-right-color: rgba(255, 255, 255, 0.75); }
-    to { border-right-color: transparent; }
-  }
+  // @keyframes blinkingCursor {
+  //   from { border-right-color: rgba(255, 255, 255, 0.75); }
+  //   to { border-right-color: transparent; }
+  // }
 
 
 
@@ -92,13 +91,13 @@
   // }
   
 
-  // .key-animation {
-  //   font-size: 1em; /* اندازه‌ی متن برای دکمه */
-  //   display: inline-block;
-  //   letter-spacing: -0.05em;
-  //   transition: transform 0.2s;
-  //   animation: pressDown 2s infinite; /* افزودن انیمیشن */
-  // }
+  .key-animation {
+    font-size: 1em; /* اندازه‌ی متن برای دکمه */
+    display: inline-block;
+    letter-spacing: -0.05em;
+    transition: transform 0.2s;
+    animation: pressDown 2s infinite; /* افزودن انیمیشن */
+  }
   
   @keyframes pressDown {
     0%, 100% {
