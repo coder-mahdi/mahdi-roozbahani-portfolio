@@ -24,24 +24,38 @@
 }
 
 
-// .content-area-home{
-//   padding-top: 35px;
-// }
-
-
 
 // wellcom message
 
   .welcome-message-wrapper{
+    font-size:19.2px;
     height: 30vh;
     margin-top: 30px;
     margin-left: 45px;
     margin-right: 70px;
 
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      max-width: 900px;
+      margin-left: 70px;
+      margin-top: 70px;
+      font-size: 28.8px;
+   }
+  
+
+    @media (min-width: 1024px){
+        margin-left: 15rem;
+        margin-right: 10rem;
+        font-size: 32px;
+    }
+  
+
   }
 
+
+
+
   .welcome-message {
-    font-size: 1.2em;
     text-align: left;
     white-space: pre-wrap;
     border-right: 2px solid rgba(255, 255, 255, 0.75); 
@@ -54,17 +68,6 @@
   }
 
 
-
-  // Buttons
-
-  // .buttons-wrapper{
-  //   position: fixed;
-  //   font-size: 50px;
-  //   display: flex;
-  //   flex-direction: column;
-  //   margin-top: 50px;
-  // }
-  
  
   
   @keyframes pressDown {
@@ -78,25 +81,6 @@
   
   
 
-  @media (min-width: 768px) and (max-width: 1024px) {
-
-    .welcome-message-wrapper{
-    max-width: 900px;
-    margin-left: 70px;
-    margin-top: 70px;
-    font-size: 1.8rem;
- }
-
-  }
-
-  @media (min-width: 1024px){
-
-    .welcome-message-wrapper{
-      margin-left: 15rem;
-      margin-right: 10rem;
-   }
-
-  }
 
 
 

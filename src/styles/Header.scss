@@ -101,12 +101,30 @@
 
 .desktop-nav {
   justify-content: flex-end;
-  // position: relative;
   top: 0;
   max-width: 900px;
   margin-right: 100px;
   margin-top: 20px;
 }
+
+.header .nav-menu .nav-link {
+  display: inline-block;
+  padding: 10px; 
+  transition: all 0.3s ease; 
+}
+
+.header .nav-menu .nav-link:hover {
+  background-color: #B6C5F2; 
+  transform: scale(1.1); 
+  border-radius: 10px; 
+}
+
+.header .nav-menu .nav-link img {
+  display: block;
+  width: 30px; 
+  height: 30px;
+}
+
 
 @media (min-width: 1024px) {
   .desktop-nav {

@@ -7,7 +7,7 @@ function ProjectSlider() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [autoPlay, setAutoPlay] = useState(true);
   
-    // بارگذاری داده‌ها از فایل JSON
+   
     useEffect(() => {
       fetch('/data/projectsData.json')
         .then((response) => response.json())
@@ -15,28 +15,28 @@ function ProjectSlider() {
         .catch((error) => console.error('Error loading project data:', error));
     }, []);
   
-    // پخش خودکار اسلایدر
+ 
     useEffect(() => {
       if (autoPlay) {
         const interval = setInterval(() => {
           setCurrentIndex((prevIndex) =>
             prevIndex === projects.length - 1 ? 0 : prevIndex + 1
           );
-        }, 5000); // هر 3 ثانیه یک اسلاید جابجا شود
+        }, 5000);
   
         return () => clearInterval(interval); // پاک کردن تایمر وقتی کامپوننت از بین برود
       }
     }, [autoPlay, currentIndex, projects.length]);
   
-    // کلیک روی دایره‌ها برای جابجایی به اسلاید خاص
+  
     const goToSlide = (index) => {
       setCurrentIndex(index);
-      setAutoPlay(false); // اگر کاربر دایره‌ای را کلیک کند، پخش خودکار متوقف می‌شود
+      setAutoPlay(false); 
     };
   
-    // توقف پخش خودکار هنگام هاور کردن
+    
     const handleMouseEnter = () => {
-      setAutoPlay(false); // وقتی کاربر ماوس را روی اسلایدر می‌برد، پخش خودکار متوقف شود
+      setAutoPlay(false);
     };
   
     const handleMouseLeave = () => {

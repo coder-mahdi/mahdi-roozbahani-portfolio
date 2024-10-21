@@ -8,60 +8,27 @@
 }
 
 .main-content{
-  // display: flex;
-  // flex-direction: column;
-  // flex-wrap: wrap;
-  // justify-content: space-between; /* تنظیم فاصله و توزیع عناصر */
-  // align-items: flex-start; 
 }
 
 
 
 .content-area {
-    padding-top: 110px;
-//   margin-top: 55px;
+  padding-top: 110px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  // justify-content: space-between; /* تنظیم فاصله و توزیع عناصر */
-  // align-items: flex-start; 
 }
 
 
-// wellcom message
-
-  // .welcome-message-wrapper{
-  //   margin-top: 30px;
-  //   margin-left: 45px;
-  //   margin-right: 70px;
-
-  // }
-
-  // .welcome-message {
-  //   font-size: 1.2em;
-  //   text-align: left;
-  //   white-space: pre-wrap;
-  //   border-right: 2px solid rgba(255, 255, 255, 0.75); 
-  //   animation: blinkingCursor 500ms steps(50) infinite normal;
-  // }
-  
-  // @keyframes blinkingCursor {
-  //   from { border-right-color: rgba(255, 255, 255, 0.75); }
-  //   to { border-right-color: transparent; }
-  // }
 
 
 
   .buttons-wrapper {
-    // position: fixed;
     align-items: center;
     font-size: 50px;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    // width: 200px;
-    // margin-left: auto;
-    // margin-right: auto;
+    margin-top: 30px;
     left: 0;
     right: 0;
   }
@@ -69,42 +36,32 @@
   .key-animation {
     font-size: 1em; 
     display: inline-block;
-    letter-spacing: -0.05em;
+    letter-spacing: 1.5px;
     transition: transform 0.2s;
     animation: pressDown 2s infinite; 
   }
 
+  .key-animation:hover {
+    font-style: italic;
+    transition: font-style 0.3s ease;
+}
 
-  // Buttons
 
-  // .buttons-wrapper{
-  //   font-size: 50px;
-  //   display: flex;
-  //   flex-direction: column;
-  //   // bottom: 150px;
-  //   // margin-top: 20px; /* فاصله مناسب از ولکام مسیج */
-  //   // position: relative;
-  //   // margin-top: 5vh;
-  //   // left: 50%;
-  //   margin-top: 50px;
-  //   transform: translate(25%);
+
+  // .key-animation {
+  //   font-size: 1em; 
+  //   display: inline-block;
+  //   letter-spacing: -0.05em;
+  //   transition: transform 0.2s;
+  //   animation: pressDown 2s infinite; 
   // }
-  
-
-  .key-animation {
-    font-size: 1em; /* اندازه‌ی متن برای دکمه */
-    display: inline-block;
-    letter-spacing: -0.05em;
-    transition: transform 0.2s;
-    animation: pressDown 2s infinite; /* افزودن انیمیشن */
-  }
   
   @keyframes pressDown {
     0%, 100% {
       transform: translateY(0);
     }
     50% {
-      transform: translateY(10px); /* شبیه‌سازی فشار دادن کلید */
+      transform: translateY(10px)
     }
   }
   

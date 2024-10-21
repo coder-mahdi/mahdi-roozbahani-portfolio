@@ -49,3 +49,15 @@
     }
 
   }
+
+
+  .sidebar ul li a div {
+    display: inline-block;
+    padding: 10px; 
+    transition: all 0.3s ease; 
+  }
+  .sidebar ul li a div:hover {
+    background-color: #B6C5F2;
+    transform: scale(1.1); 
+    border-radius: 10px; 
+  }
