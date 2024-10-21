@@ -35,13 +35,13 @@ function Layout({ children, helloText, buttonsData }) {
           <Sidebar />
           <Tabs />
         </div>
-          <div className="buttons-wrapper">
+          <h3 className="buttons-wrapper">
             {buttonsData.map((button, index) => (
               <Link key={index} to={button.link} className="custom-button">
                 <span className="key-animation">{button.title}</span>
               </Link>
             ))}
-          </div>
+          </h3>
 
       </main>
           <Footer />

@@ -130,7 +130,7 @@ function Home() {
     <Layout helloText={helloText} buttonsData={buttonsData}>
       <div className="content-area-home">
         <div className="text-slide-container">
-          <div className="animated-text">
+          <h1 className="animated-text">
             <div className="hello-text">{helloText}</div> 
             <section className="animation">
               <div className="second">
@@ -140,7 +140,7 @@ function Home() {
                 <div>{secondText}</div>
               </div>
             </section>
-          </div>
+          </h1>
         </div>
 
         <div className="welcome-message-wrapper">

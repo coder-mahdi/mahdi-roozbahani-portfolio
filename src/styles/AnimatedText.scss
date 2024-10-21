@@ -1,15 +1,8 @@
-// .animated-text-wrapper {
-//     display: flex;
-//     padding: 20px;
-//     justify-content: center;
-//     align-items: center;
-//   }
-  
-  .animated-text {
+.animated-text {
     align-items: center;
     display: flex;
     flex-direction: row;
-    font-size: 1.2rem;
+    font-size: 19px;
     padding: 10px 10px;
     padding-left: 50px;
     color: rgba(255, 255, 255, 0.70);
@@ -19,13 +12,20 @@
     text-align: center; 
     z-index: 10; 
 
+    @media (min-width: 768px) and (max-width: 1024px) {
+     font-size: 25.6px;
+    }
+    
+    @media (min-width: 1024px) {
+     font-size: 30.4px;
+    }
+    
   }
   
   .text-slide-container{
     display: flex;
     flex-direction: row;
     align-items: center;
-    // justify-content: center;
     position: relative;
   }
   
@@ -34,7 +34,6 @@
 .animation {
   height: 50px;
   overflow: hidden;
-  // margin-left: 1rem;
 }
 
 .animation > div > div {
@@ -42,6 +41,15 @@
   height: 2.81rem;
   margin-bottom: 2.81rem;
   display: inline-block;
+
+  @media (min-width: 768px) {
+    padding: 0.8rem 0.75rem;
+}
+
+  @media (min-width: 1024px) {
+    padding: 0.7rem 0.75rem;
+}
+
 }
 
 .animation div:first-child {
@@ -59,19 +67,3 @@
 }
 
 
-@media (min-width: 768px) and (max-width: 1024px) {
-
-  .animated-text{
- font-size: 1.6rem;
-}
-
-}
-
-
-@media (min-width: 1024px) {
-
-  .animated-text{
- font-size: 1.9rem;
-}
-
-}
