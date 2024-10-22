@@ -118,3 +118,21 @@
     border: 1px solid #6adf81;
   }
   
+
+  .email-button-wrapper {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .email-button {
+    background-color: rgba(15, 53, 77, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .email-button:hover {
+    background-color: #0e2f47;
+  }
