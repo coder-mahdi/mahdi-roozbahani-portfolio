@@ -18,17 +18,17 @@ const Accordion = ({ data }) => {
     <div className="accordion">
       {accordionItems.map((item, index) => (
         <div key={index}>
-          <div className="title" onClick={() => handleClick(index)}>
+          <h2 className="title" onClick={() => handleClick(index)}>
             <div className="arrow-wrapper">
               <i className={item.open ? "fa fa-angle-down fa-rotate-180" : "fa fa-angle-down"}></i>
             </div>
             <span className="title-text">{item.title}</span>
-          </div>
-          <div className={item.open ? "content content-open" : "content"}>
+          </h2>
+          <p className={item.open ? "content content-open" : "content"}>
             <div className={item.open ? "content-text content-text-open" : "content-text"}>
               {item.content}
             </div>
-          </div>
+          </p>
         </div>
       ))}
     </div>

@@ -19,6 +19,33 @@
   flex-wrap: wrap;
 }
 
+.hello-text{
+  font-size: 19px;
+
+  @media (min-width: 768px) {
+    font-size: 28.8px;
+ }
+
+
+}
+
+.hello-text {
+  display: inline-block;
+  position: relative;
+  animation: slideInLeft 3s forwards; 
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-150%); 
+  }
+  80% {
+    transform: translateX(0); 
+  }
+  100% {
+    transform: translateX(0); 
+  }
+}
 
 
 

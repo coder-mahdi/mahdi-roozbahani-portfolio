@@ -24,7 +24,7 @@ function Layout({ children, helloText, buttonsData }) {
           {location.pathname !== '/' && (
             <div className="text-slide-container">
               <div className="animated-text">
-                <div className="hello-text">{helloText}</div>
+                <h1 className="hello-text">{helloText}</h1>
               </div>
             </div>
           )}
