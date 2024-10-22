@@ -3,19 +3,20 @@
     "projects": [
         {
             "id": 1,
-            "title": "Movie database",
-            "shortDescription": "This is a short description of Project 1.This is a short description of Project 1",
+            "title": "35mm-app",
+            "shortDescription": "35mm-app is a movie database built with React, Vite, and SASS. It provides a user-friendly platform where users can explore a curated collection of films from various genres and eras.",
             "image": "/images/Project1.png",
-            "detailedDescription": "This is the detailed description of Project 1 with more information.This is the detailed description of Project 1 with more information.This is the detailed description of Project 1 with more information.",
-            "websiteLink": "https://www.project1.com"
+            "detailedDescription": "35mm-app is a robust movie database designed to offer a smooth and enjoyable user experience for anyone interested in cinema. Built with modern technologies like React for efficient component management, Vite for fast development, and SASS for advanced styling, the platform showcases a vast range of movies across different genres and time periods.\n\nThe website uses the TMDb API to retrieve movie data, making it easier for users to search, review, and save their favorite films.\n\nThe development of 35mm involved designing a clear and responsive interface that adapts well across devices. The initial design was crafted using high-fidelity wireframes in Adobe XD, laying the foundation for a streamlined and visually appealing user interface. Features such as movie listings, reviews, and the option to create a personal favorites list were carefully integrated using React Router to enable smooth navigation across the platform.\n\nI contributed to the project by assisting in coding with React, styling the components using SASS, and ensuring the site's overall responsiveness. My involvement also included organizing the project structure, fine-tuning the stylesheets, and implementing React Router for a cohesive navigation experience. The combination of Vite and SASS allowed for efficient builds and a visually polished user interface, making 35mm a comprehensive and engaging platform for movie enthusiasts.",
+
+            "websiteLink": "https://mahdiroozbahani.com/35mm-app"
           },
       {
         "id": 2,
-        "title": "Project 2",
-        "shortDescription": "This is a short description of Project 1.",
+        "title": "Call Me Guide",
+        "shortDescription": "Call Me Guide is a Vancouver-based travel startup offering an advanced platform built using modern technologies like React, Laravel, and PHP. It provides real-time travel guidance, secure payments via Stripe, and interactive maps using the Google Maps API. the platform offers an intuitive and secure travel guide for users.",
         "image": "/images/Project2.png",
-        "detailedDescription": "This is the detailed description of Project 1 with more information.This is the second project description.This is the second project descriptionThis is the second project description",
-        "websiteLink": "https://www.project1.com"      
+        "detailedDescription": "",
+        "websiteLink": "https://www.callmeguide.com"      
       },
       {
         "title": "Project 3",

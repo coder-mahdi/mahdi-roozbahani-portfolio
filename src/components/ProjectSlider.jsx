@@ -24,7 +24,7 @@ function ProjectSlider() {
           );
         }, 5000);
   
-        return () => clearInterval(interval); // پاک کردن تایمر وقتی کامپوننت از بین برود
+        return () => clearInterval(interval); 
       }
     }, [autoPlay, currentIndex, projects.length]);
   
@@ -40,11 +40,11 @@ function ProjectSlider() {
     };
   
     const handleMouseLeave = () => {
-      setAutoPlay(true); // وقتی کاربر ماوس را از اسلایدر خارج می‌کند، پخش خودکار دوباره شروع شود
+      setAutoPlay(true); 
     };
   
     if (projects.length === 0) {
-      return <div>Loading...</div>; // نمایش پیام لودینگ تا زمان بارگذاری داده‌ها
+      return <div>Loading...</div>; 
     }
   
     return (
@@ -65,12 +65,15 @@ function ProjectSlider() {
                 className="slide-image"
               />
               <div className="slide-content">
-                <h3>{project.title}</h3>
+                <h2>{project.title}</h2>
                 <p>{project.shortDescription}</p>
-  
+
+
+                <p>
                 <Link to={`/singleproject/${project.id}`} className="learn-more-btn">
-                  Learn More
+                Learn More
                 </Link>
+                </p>
               </div>
             </div>
           ))}

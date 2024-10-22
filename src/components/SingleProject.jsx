@@ -35,13 +35,18 @@ function SingleProject() {
 
   return (
     <Layout helloText={project.title} buttonsData={buttonsData}>
-      <div className="single-project">
-        <img src={project.image} alt={project.title} className="project-image" />
-        <p>{project.detailedDescription}</p>
-        <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className="visit-site-btn">
-          Visit Project Website
-        </a>
-      </div>
+<div className="single-project">
+  <div className="project-image-wrapper">
+    <img src={project.image} alt={project.title} className="project-image" />
+    <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className="visit-site-btn">
+      Visit Project Website
+    </a> 
+  </div>
+  <div className="project-content">
+    <p>{project.detailedDescription}</p>
+  </div>
+</div>
+
     </Layout>
   );
 }

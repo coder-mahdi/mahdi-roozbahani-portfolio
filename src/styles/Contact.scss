@@ -1,4 +1,16 @@
 
+.conten-main{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+
+
+  @media(min-width: 1024px){
+    flex-direction: row;
+    margin: 50px auto;
+  }
+}
+
   .welcome-message-wrapper {
     margin: 20px 0;
     padding: 10px;
@@ -7,6 +19,9 @@
     max-width: 600px;
     font-size: 1.2rem;
     color: #333;
+    max-width: 100%; 
+    margin: 20px auto; 
+    margin-bottom: 40px; 
 
     @media (min-width: 768px) {
         font-size: 1.4rem;
@@ -14,28 +29,24 @@
   }
 
   @media (min-width: 1024px) {
-  
+    flex-direction: row;
     font-size: 1.6rem;
-    margin-right: 70px;
-    max-width: none;
+    max-width: 500px; /* جمع‌تر شدن عرض فرم در حالت دسکتاپ */
+    margin: 50px auto;
 
 }
   }
   
-
-
-
-  
-
   .contact-form-wrapper {
     max-width: 600px;
     margin-right: 90px;
     margin-left: 50px;
-    margin-top: 170px;
+    // margin-top: 170px;
 
 
     @media (min-width: 768px) {
       max-width: 900px;
+     
 }
 
 @media (min-width: 1024px) {

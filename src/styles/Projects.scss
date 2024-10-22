@@ -1,125 +1,146 @@
-.learn-more-btn{
-  border-radius: 5px;
-  padding: 10px 10px;
-  color: white;
-  background-color: #123E59;
-}
-
-
 .project-slider {
-    position: relative;
-    max-width: 70%;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-    overflow: hidden;
+  position: relative;
+  max-width: 70%;
+  margin: 50px auto;
+  overflow: hidden;
 
-
-    @media (min-width: 768px) {
-     
+  @media (min-width: 768px) and (max-width: 1024px) {
     max-width: 900px;
     margin-left: 80px;
     margin-right: 100px;
-      
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 70%;
+    margin: -55px auto 0 auto;
+  }
+
+  .slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    &:hover .slide-content {
+      opacity: 1; 
     }
 
-    @media (min-width: 1024px) {
-        max-width: none;
-        margin-top: -55px;
+    .slide-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+      @media (min-width: 1024px) {
+        width: 80%; 
+        margin: 0 auto; 
+      }
     }
-  
-  
-    .slider-wrapper {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-  
-    .slide {
-      min-width: 100%; 
-      box-sizing: border-box;
-      text-align: center;
-  
-      .slide-image {
+
+    .slide-content {
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+
+      @media (min-width: 1024px) {
+        position: absolute; 
+        top: 0;
+        left: 0;
+        width: 80%; 
+        height: 100%; 
+        left: 10%; 
+        opacity: 0; 
+      }
+
+      @media (max-width: 1024px) {
+        position: static; 
         width: 100%;
         height: auto;
-        border-radius: 10px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        opacity: 1; 
+        transform: none; 
+      }
+
+      h2 {
+        margin-top: 5px;
+        font-size: 18px;
+        color: #fff;
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+          font-size: 23px;
+        }
 
         @media (min-width: 1024px) {
-          width: 45%;
-          }
+          font-size: 28px;
+        }
       }
-  
-      .slide-content {
-        margin-top: 15px;
-        background-color: rgba(0, 0, 0, 0.6);
-        padding: 20px;
-        border: 2px solid #fff;
-        border-radius: 10px;
-        max-width:100%;
-        margin: 5px auto 0;
-        opacity: 0;
-        transform: translateX(100%); 
-        animation: slideIn 0.8s ease forwards; 
+
+      p {
+        font-size: 16px;
+        color: #ddd;
+        margin: 10px;
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+          font-size: 22px;
+        }
 
         @media (min-width: 1024px) {
-          width: 42%;
-          }
-  
-        h3 {
-          margin-top: 5px;
-          font-size: 1.8rem;
-          color: #fff;
-        }
-  
-        p {
-          font-size: 1.2rem;
-          color: #ddd;
-          margin-top: 10px;
-        }
-      }
-    }
-
-  
-  
-  
-    
-  
-  
-    @keyframes slideIn {
-      from {
-        opacity: 0;
-        transform: translateX(100%); 
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-  
- 
-    .navigation-dots {
-      display: flex;
-      justify-content: center;
-      margin-top: 5px;
-  
-      .dot {
-        height: 15px;
-        width: 15px;
-        background-color: #ddd;
-        border-radius: 50%;
-        margin: 0 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-  
-        &.active {
-          background-color: #333;
-        }
-  
-        &:hover {
-          background-color: #555;
+          font-size: 25px;
         }
       }
     }
   }
-  
+
+  .navigation-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+
+    .dot {
+      height: 15px;
+      width: 15px;
+      background-color: #ddd;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &.active {
+        background-color: #333;
+      }
+
+      &:hover {
+        background-color: #555;
+      }
+    }
+  }
+}
+
+
+
+.learn-more-btn{
+  border-radius: 5px;
+  padding: 10px 10px;
+  color: white;
+  background-color: #0f354d; /* رنگ اصلی بدون شفافیت */
+  font-size: 10px;
+
+  @media (min-width: 768px) {
+    font-size: 13px;
+    }
+    @media (min-width: 1024px) {
+      font-size: 16px;
+    }
+}
+
+
+.learn-more-btn:hover {
+  background-color: #123E59;
+}
+

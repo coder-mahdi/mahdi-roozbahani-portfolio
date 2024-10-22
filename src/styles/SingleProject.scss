@@ -1,45 +1,53 @@
-/* پیش‌فرض برای موبایل */
-
-/* استایل کلی برای صفحه سینگل پروجکت */
 .single-project {
-    margin: 50px 64px;
-    padding: 30px 15px;
-    background-color: #f4f4f4;
-    border-radius: 10px;
-  }
+  display: flex; 
+  flex-direction: column; 
+  padding: 30px 15px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  margin: 50px auto; 
+  padding: 30px; 
+  max-width: calc(100% - 140px); 
   
-  /* استایل برای عنوان پروژه */
-  .single-project h2 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: #123E59;
-    text-align: center;
+ }
+
+
+.project-image-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-content {
+  flex: 1; 
+  overflow-y: auto; 
+  max-height: 500px; 
+  padding-left: 20px;
+  margin-top: 20px; 
+  max-height: 200px; 
+  overflow-y: auto;
+}
+
+
+@media (min-width: 1024px) {
+
+  .project-content {
+    max-height: 500px; 
+    overflow-y: auto;
   }
-  
-  /* استایل برای تصویر پروژه */
-  .project-image {
-    width: 100%; /* عرض کامل در موبایل */
-    height: auto;
-    display: block;
-    margin: -30px auto 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* استایل برای توضیحات پروژه */
-  .single-project p {
-    font-size: 1rem;
-    line-height: 1.4;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: justify;
-  }
-  
-  /* استایل برای دکمه‌ی "Visit Project Website" */
+}
+
   .visit-site-btn {
     display: inline-block;
-    background-color: #123E59;
+    background-color: rgba(15, 53, 77, 0.8);
     color: #fff;
     padding: 10px 20px;
     text-align: center;
@@ -49,21 +57,21 @@
     border-radius: 5px;
     transition: background-color 0.3s ease;
     display: block;
-    width: 80%; /* دکمه در موبایل عریض‌تر است */
+    width: 80%;
     max-width: 250px;
-    margin: 0 auto;
+    margin: 10px auto;
   }
   
   .visit-site-btn:hover {
-    background-color: #0e2f47;
+    background-color: #123E59;
   }
   
-  /* بریک پوینت برای تبلت */
+  
   @media (min-width: 768px) {
     .single-project {
       padding: 30px 15px;
       max-width: 700px;
-      margin: 0 auto;
+      margin: 50px auto;
     }
   
     .single-project h2 {
@@ -72,7 +80,7 @@
   
     .project-image {
       width: 100%;
-      max-width: 600px; /* محدود کردن عرض تصویر برای تبلت */
+      max-width: 600px; 
       margin-bottom: 25px;
     }
   
@@ -87,11 +95,13 @@
     }
   }
   
-  /* بریک پوینت برای دسکتاپ */
+
   @media (min-width: 1024px) {
     .single-project {
+      flex-direction: row; 
       padding: 40px 20px;
       max-width: 900px;
+      margin: 0px auto;
     }
   
     .single-project h2 {
@@ -100,7 +110,7 @@
   
     .project-image {
       width: 100%;
-      max-width: 800px; /* عرض بزرگتر برای دسکتاپ */
+      max-width: 800px; 
       margin-bottom: 30px;
     }
   
