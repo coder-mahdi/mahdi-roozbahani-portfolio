@@ -1,5 +1,4 @@
 @use 'Sidebar.scss';
-@use 'BrushTransition.scss';
 
 
 .home-page {
@@ -74,15 +73,6 @@
 }
 
 
-
-  // .key-animation {
-  //   font-size: 1em; 
-  //   display: inline-block;
-  //   letter-spacing: -0.05em;
-  //   transition: transform 0.2s;
-  //   animation: pressDown 2s infinite; 
-  // }
-  
   @keyframes pressDown {
     0%, 100% {
       transform: translateY(0);
@@ -117,11 +107,11 @@
 
   .circle-pointer {
     position: absolute;
-    width: 50px; /* عرض دایره */
-    height: 50px; /* ارتفاع دایره */
-    border: 2px solid rgb(253, 160, 160); /* خط سفید دور دایره */
-    border-radius: 50%; /* برای گرد شدن */
-    pointer-events: none; /* جلوگیری از کلیک روی دایره */
+    width: 50px; 
+    height: 50px; 
+    border: 2px solid rgb(253, 160, 160); 
+    border-radius: 50%; 
+    pointer-events: none; 
     box-sizing: border-box;
     z-index: 1100;
   }

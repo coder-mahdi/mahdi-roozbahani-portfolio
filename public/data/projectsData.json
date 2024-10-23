@@ -19,9 +19,12 @@
         "websiteLink": "https://www.callmeguide.com"      
       },
       {
-        "title": "Project 3",
-        "description": "This is the third project description.",
-        "image": "/images/Project3.jpg"
+        "id": 3,
+        "title": "Flag game",
+        "shortDescription": "Flag Game is an interactive educational project focused on the provinces and territories of Canada. This game.",
+        "image": "/images/flag-game.png",
+        "detailedDescription": "This game was developed using Java and CSS. Flag game provides a fun and engaging way for users to explore and learn about Canadian geography. Players are tasked with identifying the flags of Canada’s provinces and territories, making it an enjoyable challenge while also enhancing their knowledge of the country. Whether you're a student, a geography enthusiast, or someone looking to expand your understanding of Canada, Flag Game offers an entertaining and informative learning experience.",
+        "websiteLink": "https://mahdiroozbahani.com/flag-game/"
       }
     ],
 

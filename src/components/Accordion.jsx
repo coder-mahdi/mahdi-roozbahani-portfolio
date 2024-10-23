@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 const Accordion = ({ data }) => {
   const [accordionItems, setAccordionItems] = useState(
@@ -14,21 +16,46 @@ const Accordion = ({ data }) => {
     );
   };
 
+  const renderContent = (content) => {
+    if (typeof content === 'string') {
+      return <p>{content}</p>;
+    } else if (typeof content === 'object') {
+      return (
+        <div>
+          {Object.keys(content).map((category, idx) => (
+            <div key={idx}>
+              <h3>{category}</h3>
+              <ul>
+                {content[category].map((item, idx2) => (
+                  <li key={idx2}>
+                    {item.logo && <img src={item.logo} alt={item.name} />}
+                    {item.name || item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      );
+    }
+    return null;
+  };
+
   return (
     <div className="accordion">
       {accordionItems.map((item, index) => (
         <div key={index}>
           <h2 className="title" onClick={() => handleClick(index)}>
             <div className="arrow-wrapper">
-              <i className={item.open ? "fa fa-angle-down fa-rotate-180" : "fa fa-angle-down"}></i>
+              <FontAwesomeIcon icon={faAngleDown} className={item.open ? "fa-rotate-180" : ""} />
             </div>
             <span className="title-text">{item.title}</span>
           </h2>
-          <p className={item.open ? "content content-open" : "content"}>
+          <div className={item.open ? "content content-open" : "content"}>
             <div className={item.open ? "content-text content-text-open" : "content-text"}>
-              {item.content}
+              {renderContent(item.content)}
             </div>
-          </p>
+          </div>
         </div>
       ))}
     </div>

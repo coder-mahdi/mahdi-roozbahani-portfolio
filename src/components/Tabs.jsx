@@ -13,7 +13,7 @@ function Tabs() {
       .catch((error) => console.error('Error loading tabs data:', error));
   }, []);
 
-  // پخش صدای کلیک تب
+
   const playSound = () => {
     const audio = new Audio('../audio/tabs-sound.mp3');
     audio.play();
@@ -25,18 +25,18 @@ function Tabs() {
     playSound(); 
   };
 
-  // تابع برای بستن تب‌ها و بازگشت به حالت اولیه
+  
   const resetTabs = () => {
     setActiveTab(null);
     setIsClicked(false);
   };
 
   return (
-    <div className="tabs-wrapper" onClick={resetTabs}> {/* کلیک در هر جای صفحه برای بازگشت به حالت اولیه */}
-      <div className={`overlay ${activeTab !== null ? 'show' : ''}`}></div> {/* لایه تیره */}
+    <div className="tabs-wrapper" onClick={resetTabs}> 
+      <div className={`overlay ${activeTab !== null ? 'show' : ''}`}></div> 
 
-      <div className="tabs-container" onClick={(e) => e.stopPropagation()}> {/* جلوگیری از بستن تب در صورت کلیک روی خود تب */}
-        {/* دکمه‌های تب‌ها */}
+      <div className="tabs-container" onClick={(e) => e.stopPropagation()}> 
+       
         <div className="tabs-buttons">
           {tabsData.map((tab, index) => (
             <button
@@ -49,7 +49,7 @@ function Tabs() {
           ))}
         </div>
 
-        {/* محتوای تب‌ها */}
+       
         <div className="tabs-content">
           {tabsData.map((tab, index) => (
             activeTab === index && (

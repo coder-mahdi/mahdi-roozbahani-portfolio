@@ -5,8 +5,6 @@ import About from './components/About';
 import Projects from './components/Projects.jsx';
 import Contact from './components/Contact.jsx';
 import SingleProject from './components/SingleProject.jsx';
-
-
 import './styles/main.scss';
 
 

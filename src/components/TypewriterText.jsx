@@ -9,7 +9,7 @@ function TypewriterText({ text }) {
       const timeout = setTimeout(() => {
         setDisplayedText((prev) => prev + text[index]);
         setIndex((prev) => prev + 1);
-      }, 20); // تنظیم سرعت تایپ
+      }, 20);
       return () => clearTimeout(timeout);
     }
   }, [index, text]);
