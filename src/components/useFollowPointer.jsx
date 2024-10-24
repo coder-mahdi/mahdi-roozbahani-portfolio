@@ -10,9 +10,12 @@ export function useFollowPointer(ref) {
   const y = useSpring(yPoint, spring);
 
   useEffect(() => {
-    if (!ref.current) return;
-
     const handlePointerMove = ({ clientX, clientY }) => {
+     
+      if (window.innerWidth <= 1024) return;
+
+      if (!ref.current) return;
+
       const element = ref.current;
 
       frame.read(() => {
@@ -24,7 +27,7 @@ export function useFollowPointer(ref) {
     window.addEventListener("pointermove", handlePointerMove);
 
     return () => window.removeEventListener("pointermove", handlePointerMove);
-  }, []);
+  }, [xPoint, yPoint, ref]);
 
   return { x, y };
 }

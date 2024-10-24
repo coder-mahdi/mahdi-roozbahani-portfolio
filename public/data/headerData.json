@@ -4,7 +4,9 @@
       {
       "icon":"/images/home.svg", 
       "link": "/" },
-      { "icon": "/images/contact.svg", "link": "/contact" }
+      { "icon": "/images/contact.svg", "link": "/contact" },
+      { "icon": "/images/about.svg", "link": "/about" },
+      { "icon": "/images/projects.svg", "link": "/projects" }
     ]
   }
   

@@ -10,8 +10,9 @@ import './styles/main.scss';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
     <Routes>
+      
     <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />

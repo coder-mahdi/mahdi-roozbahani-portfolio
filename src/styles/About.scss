@@ -1,8 +1,8 @@
 
   .accordion {
     overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
     max-width: 600px;
     background-color: transparent;
     margin-top: 50px;
@@ -95,6 +95,7 @@
 
   
   .content-text {
+    display: none;
     padding: 10px;
     visibility: hidden;
     opacity: 0;
@@ -102,6 +103,7 @@
   }
   
   .content-text-open {
+    display: block;
     visibility: visible;
     opacity: 1;
     transition: opacity 0.8s ease-in; 

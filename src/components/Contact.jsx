@@ -22,31 +22,29 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    window.grecaptcha.ready(() => {
-      window.grecaptcha.execute('6LclDWkqAAAAAAYPl_MAvzZrVo3DlB4nYy39S4El', { action: 'submit' }).then((token) => {
-   
-        fetch('https://mahdiroozbahani.com/save_message.php', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          body: new URLSearchParams({
-            name,
-            email,
-            message,
-            recaptchaToken: token,
-          }),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log('Success:', data);
-            setSubmitted(true);
-          })
-          .catch((error) => {
-            console.error('Error:', error);
-          });
+    fetch('https://mahdiroozbahani.com/save_message.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams({
+        name,
+        email,
+        message,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Success:', data);
+        setSubmitted(true);
+        // پاک کردن مقادیر ورودی پس از ارسال موفقیت‌آمیز
+        setName('');
+        setEmail('');
+        setMessage('');
+      })
+      .catch((error) => {
+        console.error('Error:', error);
       });
-    });
   };
 
   if (!contactData) {
@@ -56,16 +54,14 @@ function Contact() {
   return (
     <Layout helloText={contactData.helloMessage} buttonsData={contactData.buttons}>
       <div className="conten-main">
-    
         <div className="welcome-message-wrapper">
           <TypewriterText text={contactData.welcomeMessage} /> 
-        <div className="email-button-wrapper">
-          <a href="mailto:hello@mahdiroozbahani.com" className="email-button">
-            Send Email
-          </a>
+          <div className="email-button-wrapper">
+            <a href="mailto:hello@mahdiroozbahani.com" className="email-button">
+              Send Email
+            </a>
+          </div>
         </div>
-        </div>
-
 
         <div className="contact-form-wrapper">
           {submitted && (

@@ -5,6 +5,7 @@ import { u } from 'framer-motion/client'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/',
 })
 
 
