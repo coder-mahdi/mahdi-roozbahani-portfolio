@@ -44,7 +44,7 @@ function Tabs() {
               className={`tab-button ${activeTab === index ? 'hidden' : ''} ${isClicked && activeTab === index ? 'clicked' : ''}`} 
               onClick={() => handleTabClick(index)}
             >
-              {tab.title}
+              <p>{tab.title}</p>
             </button>
           ))}
         </div>

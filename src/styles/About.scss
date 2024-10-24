@@ -1,12 +1,10 @@
 
   .accordion {
     overflow: hidden;
-    // display: flex;
-    // flex-wrap: wrap;
     max-width: 600px;
     background-color: transparent;
     margin-top: 50px;
-    margin-left: 55px;
+    margin-left: 70px;
     margin-right: 85px;
 
     @media (min-width: 768px) and (max-width: 1024px){

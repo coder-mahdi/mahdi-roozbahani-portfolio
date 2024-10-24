@@ -3,94 +3,120 @@ import { Link } from 'react-router-dom';
 import '../styles/Projects.scss'; 
 
 function ProjectSlider() {
-    const [projects, setProjects] = useState([]);
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [autoPlay, setAutoPlay] = useState(true);
+  const [projects, setProjects] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(true);
   
-   
-    useEffect(() => {
-      fetch('/data/projectsData.json')
-        .then((response) => response.json())
-        .then((data) => setProjects(data.projects))
-        .catch((error) => console.error('Error loading project data:', error));
-    }, []);
-  
- 
-    useEffect(() => {
-      if (autoPlay) {
-        const interval = setInterval(() => {
-          setCurrentIndex((prevIndex) =>
-            prevIndex === projects.length - 1 ? 0 : prevIndex + 1
-          );
-        }, 5000);
-  
-        return () => clearInterval(interval); 
-      }
-    }, [autoPlay, currentIndex, projects.length]);
-  
-  
-    const goToSlide = (index) => {
-      setCurrentIndex(index);
-      setAutoPlay(false); 
-    };
-  
-    
-    const handleMouseEnter = () => {
-      setAutoPlay(false);
-    };
-  
-    const handleMouseLeave = () => {
-      setAutoPlay(true); 
-    };
-  
-    if (projects.length === 0) {
-      return <div>Loading...</div>; 
+  // Variables for touch events
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  useEffect(() => {
+    fetch('/data/projectsData.json')
+      .then((response) => response.json())
+      .then((data) => setProjects(data.projects))
+      .catch((error) => console.error('Error loading project data:', error));
+  }, []);
+
+  useEffect(() => {
+    if (autoPlay) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) =>
+          prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 5000);
+
+      return () => clearInterval(interval); 
     }
-  
-    return (
-      <div
-        className="project-slider"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <div
-          className="slider-wrapper"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {projects.map((project, index) => (
-            <div key={index} className="slide">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="slide-image"
-              />
-              <div className="slide-content">
-                <h2>{project.title}</h2>
-                <p>{project.shortDescription}</p>
+  }, [autoPlay, currentIndex, projects.length]);
 
+  // Handle swipe start
+  const handleTouchStart = (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  };
 
-                <p>
-                <Link to={`/singleproject/${project.id}`} className="learn-more-btn">
-                Learn More
-                </Link>
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-  
+  // Handle swipe move (optional, if needed)
+  const handleTouchMove = (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+  };
 
-        <div className="navigation-dots">
-          {projects.map((_, index) => (
-            <span
-              key={index}
-              className={`dot ${index === currentIndex ? 'active' : ''}`}
-              onClick={() => goToSlide(index)}
-            ></span>
-          ))}
-        </div>
-      </div>
-    );
+  // Handle swipe end
+  const handleTouchEnd = () => {
+    if (touchStartX - touchEndX > 50) {
+      // Swipe left (next slide)
+      setCurrentIndex((prevIndex) => (prevIndex === projects.length - 1 ? 0 : prevIndex + 1));
+      setAutoPlay(false);
+    }
+
+    if (touchStartX - touchEndX < -50) {
+      // Swipe right (previous slide)
+      setCurrentIndex((prevIndex) => (prevIndex === 0 ? projects.length - 1 : prevIndex - 1));
+      setAutoPlay(false);
+    }
+  };
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+    setAutoPlay(false); 
+  };
+
+  const handleMouseEnter = () => {
+    setAutoPlay(false);
+  };
+
+  const handleMouseLeave = () => {
+    setAutoPlay(true); 
+  };
+
+  if (projects.length === 0) {
+    return <div>Loading...</div>; 
   }
-  
-  export default ProjectSlider;
+
+  return (
+    <div
+      className="project-slider"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
+      <div
+        className="slider-wrapper"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {projects.map((project, index) => (
+          <div key={index} className="slide">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="slide-image"
+            />
+            <div className="slide-content">
+              <h2>{project.title}</h2>
+              <p>{project.shortDescription}</p>
+
+              <p>
+                <Link to={`/singleproject/${project.id}`} className="learn-more-btn">
+                  Learn More
+                </Link>
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="navigation-dots">
+        {projects.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${index === currentIndex ? 'active' : ''}`}
+            onClick={() => goToSlide(index)}
+          ></span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default ProjectSlider;

@@ -1,38 +1,99 @@
 {
-    "helloMessage": "My Projects",
-    "projects": [
-        {
-            "id": 1,
-            "title": "35mm-app",
-            "shortDescription": "35mm-app is a movie database built with React, Vite, and SASS. It provides a user-friendly platform where users can explore a curated collection of films from various genres and eras.",
-            "image": "/images/Project1.png",
-            "detailedDescription": "35mm-app is a robust movie database designed to offer a smooth and enjoyable user experience for anyone interested in cinema. Built with modern technologies like React for efficient component management, Vite for fast development, and SASS for advanced styling, the platform showcases a vast range of movies across different genres and time periods.\n\nThe website uses the TMDb API to retrieve movie data, making it easier for users to search, review, and save their favorite films.\n\nThe development of 35mm involved designing a clear and responsive interface that adapts well across devices. The initial design was crafted using high-fidelity wireframes in Adobe XD, laying the foundation for a streamlined and visually appealing user interface. Features such as movie listings, reviews, and the option to create a personal favorites list were carefully integrated using React Router to enable smooth navigation across the platform.\n\nI contributed to the project by assisting in coding with React, styling the components using SASS, and ensuring the site's overall responsiveness. My involvement also included organizing the project structure, fine-tuning the stylesheets, and implementing React Router for a cohesive navigation experience. The combination of Vite and SASS allowed for efficient builds and a visually polished user interface, making 35mm a comprehensive and engaging platform for movie enthusiasts.",
-
-            "websiteLink": "https://mahdiroozbahani.com/35mm-app"
-          },
-      {
-        "id": 2,
-        "title": "Call Me Guide",
-        "shortDescription": "Call Me Guide is a Vancouver-based travel startup offering an advanced platform built using modern technologies like React, Laravel, and PHP. It provides real-time travel guidance, secure payments via Stripe, and interactive maps using the Google Maps API. the platform offers an intuitive and secure travel guide for users.",
-        "image": "/images/Project2.png",
-        "detailedDescription": "",
-        "websiteLink": "https://www.callmeguide.com"      
+  "helloMessage": "My Projects",
+  "projects": [
+    {
+      "id": 1,
+      "title": "35mm-app",
+      "shortDescription": "35mm-app is a movie database built with React, Vite, and SASS. It provides a user-friendly platform where users can explore a curated collection of films from various genres and eras.",
+      "image": "/images/Project1.png",
+      "detailedDescription": {
+        "overview": "35mm-app: A dynamic movie database built with modern technologies to offer a smooth and enjoyable experience for cinema lovers.",
+        "sections": {
+          "Technologies": [
+            "Developed with React for component management",
+            "Vite for fast builds",
+            "SASS for advanced styling"
+          ],
+          "TMDb API": [
+            "Integrated for seamless access to a vast collection of movies across genres and time periods"
+          ],
+          "Responsive Design": [
+            "Designed using high-fidelity wireframes in Adobe XD",
+            "Ensures a clear and adaptive interface across all devices"
+          ],
+          "Key Features": [
+            "Browse and search for movies",
+            "Create and manage a personal favorites list",
+            "Read and leave reviews"
+          ],
+          "React Router": [
+            "Implemented for seamless navigation and a user-friendly experience"
+          ],
+          "Contributions": [
+            "Assisted in coding React components",
+            "Styled UI elements using SASS for a polished look",
+            "Organized project structure and optimized stylesheets"
+          ]
+        }
       },
-      {
-        "id": 3,
-        "title": "Flag game",
-        "shortDescription": "Flag Game is an interactive educational project focused on the provinces and territories of Canada. This game.",
-        "image": "/images/flag-game.png",
-        "detailedDescription": "This game was developed using Java and CSS. Flag game provides a fun and engaging way for users to explore and learn about Canadian geography. Players are tasked with identifying the flags of Canada’s provinces and territories, making it an enjoyable challenge while also enhancing their knowledge of the country. Whether you're a student, a geography enthusiast, or someone looking to expand your understanding of Canada, Flag Game offers an entertaining and informative learning experience.",
-        "websiteLink": "https://mahdiroozbahani.com/flag-game/"
-      }
-    ],
-
-    "buttons": [
-      {
-        "title": "About",
-        "link": "/about"
-      }
-    ]
-  }
-  
+      "websiteLink": "https://mahdiroozbahani.com/35mm-app"
+    },
+    {
+      "id": 2,
+      "title": "Call Me Guide",
+      "shortDescription": "Call Me Guide is a Vancouver-based travel startup offering an advanced platform built using modern technologies like React, Laravel, and PHP. It provides real-time travel guidance, secure payments via Stripe, and interactive maps using the Google Maps API.",
+      "image": "/images/Project2.png",
+      "detailedDescription": {
+        "overview": "Call Me Guide: A platform offering real-time travel guidance with a user-friendly interface and secure payment integration.",
+        "sections": {
+          "Technologies": [
+            "Developed with React for frontend",
+            "Laravel for backend",
+            "PHP for server-side logic"
+          ],
+          "Features": [
+            "Secure payments via Stripe",
+            "Interactive maps using the Google Maps API",
+            "Real-time travel guidance and support"
+          ],
+          "Contributions": [
+            "Helped integrate Stripe payment gateway",
+            "Worked on frontend design and interactivity using React",
+            "Ensured smooth user experience with real-time updates"
+          ]
+        }
+      },
+      "websiteLink": "https://www.callmeguide.com"
+    },
+    {
+      "id": 3,
+      "title": "Flag Game",
+      "shortDescription": "Flag Game is an interactive educational project focused on the provinces and territories of Canada.",
+      "image": "/images/flag-game.png",
+      "detailedDescription": {
+        "overview": "Flag Game: An engaging educational game focused on Canadian geography, developed to enhance users' knowledge of Canada's provinces and territories.",
+        "sections": {
+          "Technologies": [
+            "Developed using Java for core logic",
+            "CSS for styling and layout"
+          ],
+          "Features": [
+            "Interactive gameplay to identify the flags of Canada's provinces and territories",
+            "Fun and educational, suitable for students and geography enthusiasts alike"
+          ],
+          "Contributions": [
+            "Designed the game flow and interaction logic",
+            "Worked on the UI and visual elements using CSS"
+          ]
+        }
+      },
+      "websiteLink": "https://mahdiroozbahani.com/flag-game/"
+    }
+  ],
+  "buttons": [
+    {
+      "title": "About",
+      "link": "/about"
+    }
+  ]
+}
