@@ -37,91 +37,65 @@
 }
   }
   
-  .contact-form-wrapper {
-    max-width: 600px;
-    margin-right: 90px;
-    margin-left: 50px;
+//   .contact-form-wrapper {
+//     max-width: 600px;
+//     margin-right: 90px;
+//     margin-left: 50px;
 
 
 
-    @media (min-width: 768px) {
-      max-width: 900px;
+//     @media (min-width: 768px) {
+//       max-width: 900px;
      
-}
+// }
 
-@media (min-width: 1024px) {
-  max-width: none;
+// @media (min-width: 1024px) {
+//   max-width: none;
 
-}
+// }
   
-  }
+//   }
   
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-  }
+  // .contact-form {
+  //   display: flex;
+  //   flex-direction: column;
+  // }
   
-  .form-group {
-    margin-bottom: 15px;
+  // .form-group {
+  //   margin-bottom: 15px;
   
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 1rem;
-      color: #333;
-    }
+  //   label {
+  //     display: block;
+  //     margin-bottom: 8px;
+  //     font-size: 1rem;
+  //     color: #333;
+  //   }
   
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
-      outline: none;
+  //   input, textarea {
+  //     width: 100%;
+  //     padding: 10px;
+  //     border: 1px solid #ccc;
+  //     border-radius: 5px;
+  //     font-size: 1rem;
+  //     outline: none;
   
-      &:focus {
-        border-color: #008CBA;
-      }
-    }
+  //     &:focus {
+  //       border-color: #008CBA;
+  //     }
+  //   }
   
-    textarea {
-      height: 150px;
-      resize: vertical;
-    }
-  }
+  //   textarea {
+  //     height: 150px;
+  //     resize: vertical;
+  //   }
+  // }
   
  
-  .submit-btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #008CBA;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  
-    &:hover {
-      background-color: #005f73;
-    }
-  }
-  
-
-  .form-success {
-    text-align: center;
-    color: green;
-    font-size: 1.2rem;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #e0f7e7;
-    border-radius: 8px;
-    border: 1px solid #6adf81;
-  }
-  
 
   .email-button-wrapper {
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
   
   .email-button {
@@ -136,3 +110,8 @@
   .email-button:hover {
     background-color: #0e2f47;
   }
+
+
+
+  
+ 
