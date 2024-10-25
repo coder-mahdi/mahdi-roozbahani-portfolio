@@ -5,7 +5,7 @@
       "id": 1,
       "title": "35mm-app",
       "shortDescription": "35mm-app is a movie database built with React, Vite, and SASS. It provides a user-friendly platform where users can explore a curated collection of films from various genres and eras.",
-      "image": "/images/Project1.png",
+      "image": "/images/projects/moviedatabase.webp",
       "detailedDescription": {
         "overview": "35mm-app: A dynamic movie database built with modern technologies to offer a smooth and enjoyable experience for cinema lovers.",
         "sections": {
@@ -15,11 +15,12 @@
             "SASS for advanced styling"
           ],
           "TMDb API": [
-            "Integrated for seamless access to a vast collection of movies across genres and time periods"
+            "This app uses the TMDb API to provide seamless access to a vast collection of movies from various genres and time periods."
           ],
           "Responsive Design": [
-            "Designed using high-fidelity wireframes in Adobe XD",
-            "Ensures a clear and adaptive interface across all devices"
+            "The initial design was created using high-fidelity wireframes in Adobe XD for a structured and organized layout.",
+            "During the coding phase, sass was used to implement the design and ensure it aligns with the vision.",
+            "This app is fully responsive, designed to provide an optimal viewing experience across all devices, screen sizes, and orientations, ensuring it looks great on desktops, tablets, and smartphones."
           ],
           "Key Features": [
             "Browse and search for movies",
@@ -42,7 +43,7 @@
       "id": 2,
       "title": "Call Me Guide",
       "shortDescription": "Call Me Guide is a Vancouver-based travel startup offering an advanced platform built using modern technologies like React, Laravel, and PHP. It provides real-time travel guidance, secure payments via Stripe, and interactive maps using the Google Maps API.",
-      "image": "/images/Project2.png",
+      "image": "/images/projects/callmeguide.webp",
       "detailedDescription": {
         "overview": "Call Me Guide: A platform offering real-time travel guidance with a user-friendly interface and secure payment integration.",
         "sections": {
@@ -57,9 +58,9 @@
             "Real-time travel guidance and support"
           ],
           "Contributions": [
-            "Helped integrate Stripe payment gateway",
-            "Worked on frontend design and interactivity using React",
-            "Ensured smooth user experience with real-time updates"
+            "Founder and main architect of the platform, Led the overall project management and development of the platform, Coordinated and managed collaboration between frontend, backend, and design teams",
+            "Oversaw the entire project lifecycle, ensuring alignment with business goals and technical requirements, Ensured a smooth user experience with real-time updates and seamless navigation",
+            "Worked on frontend design and interactivity using React"
           ]
         }
       },
@@ -69,7 +70,7 @@
       "id": 3,
       "title": "Flag Game",
       "shortDescription": "Flag Game is an interactive educational project focused on the provinces and territories of Canada.",
-      "image": "/images/flag-game.png",
+      "image": "/images/projects/flaggame.webp",
       "detailedDescription": {
         "overview": "Flag Game: An engaging educational game focused on Canadian geography, developed to enhance users' knowledge of Canada's provinces and territories.",
         "sections": {
@@ -82,12 +83,46 @@
             "Fun and educational, suitable for students and geography enthusiasts alike"
           ],
           "Contributions": [
-            "Designed the game flow and interaction logic",
-            "Worked on the UI and visual elements using CSS"
+            "Handled the entire project from concept to completion",
+             "Designed and implemented the game flow and interaction logic", 
+             "Developed the core functionality using Java", 
+             "Created the user interface and visual elements with CSS", 
+             "Ensured the game is both educational and engaging for users",
+              "Managed all aspects of the project, including design, development, and testing"
           ]
         }
       },
       "websiteLink": "https://mahdiroozbahani.com/flag-game/"
+    },
+    {
+      "id": 4,
+      "title": "pacificpeaks",
+      "shortDescription": "Pacific Peaks is a website for an adventure tour business offering day and multi-day tours throughout the year, providing users with a seamless experience to explore various adventure packages across all seasons.",
+      "image": "/images/projects/pacificpeaks.webp",
+      "detailedDescription": {
+        "overview": "Pacific Peaks is a new business project built with WordPress. The project is currently ongoing and has not been fully launched yet. Pacific Peaks offers adventure tours ranging from one-day to multi-day options in all four seasons with various packages.",
+        "sections": {
+          "Technologies": [
+            "Built using WordPress and WooCommerce",
+        "Custom WordPress theme developed for the platform",
+        "Backend PHP code written to handle custom functionalities",
+        "Styled with SASS",
+        "Security and SEO plugins integrated for optimization"
+          ],
+          "Features": [
+            "Interactive gameplay to identify the flags of Canada's provinces and territories",
+            "Fun and educational, suitable for students and geography enthusiasts alike"
+          ],
+          "Contributions": [
+            "Collaborated in the initial planning phase of the project",
+            "Focused on backend development, specifically writing custom PHP code for the WordPress theme",
+            "Worked extensively on styling the pages using SASS to ensure a polished and consistent design",
+            "Contributed to the integration of WooCommerce and other WordPress functionalities",
+            "Helped implement SEO and security plugins to enhance the performance and safety of the website"
+        ]
+        }
+      },
+      "websiteLink": "#"
     }
   ],
   "buttons": [
