@@ -16,7 +16,7 @@ function Contact() {
   }, []);
 
   if (!contactData) {
-    return <div>Loading...</div>;
+    return <p>Loading...</p>;
   }
 
   return (
