@@ -24,7 +24,11 @@ function About() {
 
   return (
     <Layout helloText={helloText} buttonsData={buttonsData}>
-      {accordionData.length > 0 && <Accordion data={accordionData} />}
+      <main>
+        <section>
+          {accordionData.length > 0 && <Accordion data={accordionData} />}
+        </section>
+      </main>
     </Layout>
   );
 }

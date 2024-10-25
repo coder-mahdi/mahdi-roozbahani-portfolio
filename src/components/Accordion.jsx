@@ -45,7 +45,14 @@ const Accordion = ({ data }) => {
     <div className="accordion">
       {accordionItems.map((item, index) => (
         <div key={index}>
-          <h2 className="title" onClick={() => handleClick(index)}>
+          <h2 
+            className="title" 
+            onClick={() => handleClick(index)} 
+            aria-expanded={item.open ? "true" : "false"}
+            role="button"
+            tabIndex="0"
+            onKeyDown={(e) => e.key === 'Enter' && handleClick(index)}
+          >
             <div className="arrow-wrapper">
               <FontAwesomeIcon icon={faAngleDown} className={item.open ? "fa-rotate-180" : ""} />
             </div>

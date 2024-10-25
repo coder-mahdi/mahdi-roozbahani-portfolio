@@ -14,7 +14,7 @@ function TypewriterText({ text }) {
     }
   }, [index, text]);
 
-  return <p className="welcome-message">{displayedText}</p>;
+  return <p className="welcome-message" aria-label="Animated greeting text" tabIndex="0">{displayedText}</p>;
 }
 
 export default TypewriterText;

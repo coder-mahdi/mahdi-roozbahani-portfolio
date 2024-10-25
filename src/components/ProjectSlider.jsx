@@ -6,7 +6,7 @@ function ProjectSlider() {
   const [projects, setProjects] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
-  
+
   // Variables for touch events
   let touchStartX = 0;
   let touchEndX = 0;
@@ -68,12 +68,30 @@ function ProjectSlider() {
     setAutoPlay(true); 
   };
 
+  // Add keyboard navigation
+  const handleKeyDown = (e) => {
+    if (e.key === 'ArrowRight') {
+      setCurrentIndex((prevIndex) => (prevIndex === projects.length - 1 ? 0 : prevIndex + 1));
+      setAutoPlay(false);
+    } else if (e.key === 'ArrowLeft') {
+      setCurrentIndex((prevIndex) => (prevIndex === 0 ? projects.length - 1 : prevIndex - 1));
+      setAutoPlay(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [currentIndex, projects.length]);
+
   if (projects.length === 0) {
-    return <div>Loading...</div>; 
+    return <p>Loading...</p>; 
   }
 
   return (
-    <div
+    <section
       className="project-slider"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -86,10 +104,10 @@ function ProjectSlider() {
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {projects.map((project, index) => (
-          <div key={index} className="slide">
+          <article key={index} className="slide">
             <img
               src={project.image}
-              alt={project.title}
+              alt={`Image of ${project.title}`} // Providing meaningful alt text
               className="slide-image"
             />
             <div className="slide-content">
@@ -102,20 +120,22 @@ function ProjectSlider() {
                 </Link>
               </p>
             </div>
-          </div>
+          </article>
         ))}
       </div>
 
-      <div className="navigation-dots">
+      <nav className="navigation-dots" aria-label="Slider Navigation">
         {projects.map((_, index) => (
           <span
             key={index}
             className={`dot ${index === currentIndex ? 'active' : ''}`}
             onClick={() => goToSlide(index)}
+            role="button"
+            aria-label={`Go to slide ${index + 1}`}
           ></span>
         ))}
-      </div>
-    </div>
+      </nav>
+    </section>
   );
 }
 

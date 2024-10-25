@@ -31,21 +31,19 @@ function Layout({ children, helloText, buttonsData }) {
 
           {children}
 
-
           <Sidebar />
           <Tabs />
         </div>
-          <h3 className="buttons-wrapper">
-            {buttonsData.map((button, index) => (
-              <Link key={index} to={button.link} className="custom-button">
-                <span className="key-animation">{button.title}</span>
-              </Link>
-            ))}
-          </h3>
 
+        <div className="buttons-wrapper">  
+          {buttonsData.map((button, index) => (
+            <Link key={index} to={button.link} className="custom-button">
+              <span className="key-animation">{button.title}</span>
+            </Link>
+          ))}
+        </div>
       </main>
-          <Footer />
-
+      <Footer />
     </div>
   );
 }

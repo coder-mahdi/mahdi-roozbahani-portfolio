@@ -6,6 +6,7 @@
       "title": "35mm-app",
       "shortDescription": "35mm-app is a movie database built with React, Vite, and SASS. It provides a user-friendly platform where users can explore a curated collection of films from various genres and eras.",
       "image": "/images/projects/moviedatabase.webp",
+      "alt": "Screenshot of 35mm movie database app", 
       "detailedDescription": {
         "overview": "35mm-app: A dynamic movie database built with modern technologies to offer a smooth and enjoyable experience for cinema lovers.",
         "sections": {
@@ -44,6 +45,7 @@
       "title": "Call Me Guide",
       "shortDescription": "Call Me Guide is a Vancouver-based travel startup offering an advanced platform built using modern technologies like React, Laravel, and PHP. It provides real-time travel guidance, secure payments via Stripe, and interactive maps using the Google Maps API.",
       "image": "/images/projects/callmeguide.webp",
+      "alt": "Screenshot of Call Me Guide travel app",
       "detailedDescription": {
         "overview": "Call Me Guide: A platform offering real-time travel guidance with a user-friendly interface and secure payment integration.",
         "sections": {
@@ -58,8 +60,11 @@
             "Real-time travel guidance and support"
           ],
           "Contributions": [
-            "Founder and main architect of the platform, Led the overall project management and development of the platform, Coordinated and managed collaboration between frontend, backend, and design teams",
-            "Oversaw the entire project lifecycle, ensuring alignment with business goals and technical requirements, Ensured a smooth user experience with real-time updates and seamless navigation",
+            "Founder and main architect of the platform",
+            "Led the overall project management and development of the platform",
+            "Coordinated and managed collaboration between frontend, backend, and design teams",
+            "Oversaw the entire project lifecycle, ensuring alignment with business goals and technical requirements",
+            "Ensured a smooth user experience with real-time updates and seamless navigation",
             "Worked on frontend design and interactivity using React"
           ]
         }
@@ -71,6 +76,7 @@
       "title": "Flag Game",
       "shortDescription": "Flag Game is an interactive educational project focused on the provinces and territories of Canada.",
       "image": "/images/projects/flaggame.webp",
+      "alt": "Screenshot of Flag Game website",
       "detailedDescription": {
         "overview": "Flag Game: An engaging educational game focused on Canadian geography, developed to enhance users' knowledge of Canada's provinces and territories.",
         "sections": {
@@ -84,11 +90,11 @@
           ],
           "Contributions": [
             "Handled the entire project from concept to completion",
-             "Designed and implemented the game flow and interaction logic", 
-             "Developed the core functionality using Java", 
-             "Created the user interface and visual elements with CSS", 
-             "Ensured the game is both educational and engaging for users",
-              "Managed all aspects of the project, including design, development, and testing"
+            "Designed and implemented the game flow and interaction logic", 
+            "Developed the core functionality using Java", 
+            "Created the user interface and visual elements with CSS", 
+            "Ensured the game is both educational and engaging for users",
+            "Managed all aspects of the project, including design, development, and testing"
           ]
         }
       },
@@ -99,15 +105,16 @@
       "title": "pacificpeaks",
       "shortDescription": "Pacific Peaks is a website for an adventure tour business offering day and multi-day tours throughout the year, providing users with a seamless experience to explore various adventure packages across all seasons.",
       "image": "/images/projects/pacificpeaks.webp",
+      "alt": "Screenshot of Pacific Peaks adventure tour website",
       "detailedDescription": {
         "overview": "Pacific Peaks is a new business project built with WordPress. The project is currently ongoing and has not been fully launched yet. Pacific Peaks offers adventure tours ranging from one-day to multi-day options in all four seasons with various packages.",
         "sections": {
           "Technologies": [
             "Built using WordPress and WooCommerce",
-        "Custom WordPress theme developed for the platform",
-        "Backend PHP code written to handle custom functionalities",
-        "Styled with SASS",
-        "Security and SEO plugins integrated for optimization"
+            "Custom WordPress theme developed for the platform",
+            "Backend PHP code written to handle custom functionalities",
+            "Styled with SASS",
+            "Security and SEO plugins integrated for optimization"
           ],
           "Features": [
             "Interactive gameplay to identify the flags of Canada's provinces and territories",
@@ -119,7 +126,7 @@
             "Worked extensively on styling the pages using SASS to ensure a polished and consistent design",
             "Contributed to the integration of WooCommerce and other WordPress functionalities",
             "Helped implement SEO and security plugins to enhance the performance and safety of the website"
-        ]
+          ]
         }
       },
       "websiteLink": "#"

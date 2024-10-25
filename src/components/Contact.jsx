@@ -21,16 +21,16 @@ function Contact() {
 
   return (
     <Layout helloText={contactData.helloMessage} buttonsData={contactData.buttons}>
-      <div className="conten-main">
-        <div className="welcome-message-wrapper">
+      <main className="content-main"> 
+        <section className="welcome-message-wrapper">
           <TypewriterText text={contactData.welcomeMessage} /> 
           <div className="email-button-wrapper">
             <a href="mailto:hello@mahdiroozbahani.com" className="email-button">
               Send Email
             </a>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </Layout>
   );
 }

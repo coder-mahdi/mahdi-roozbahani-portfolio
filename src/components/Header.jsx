@@ -26,7 +26,7 @@ function Header() {
       </div>
 
   
-      <nav className="nav-menu desktop-nav">
+      <nav className="nav-menu desktop-nav" >
         {headerData.navLinks.map((link, index) => (
         <Link key={index} to={link.link} className="nav-link">
         {link.icon ? (
