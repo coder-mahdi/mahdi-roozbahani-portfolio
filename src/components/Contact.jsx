@@ -26,7 +26,7 @@ function Contact() {
           <TypewriterText text={contactData.welcomeMessage} /> 
           <div className="email-button-wrapper">
             <a href="mailto:hello@mahdiroozbahani.com" className="email-button">
-              Send Email
+             Send me an Email
             </a>
           </div>
         </section>
