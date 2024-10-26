@@ -4,9 +4,9 @@
       "name": "Name",
       "email": "Email",
       "message": "Message",
-      "submit": "Send Message"
+      "submit": "Send me an Email"
     },
-    "welcomeMessage": "I’m excited to hear from you! If you’d like to discuss any of my projects or explore potential opportunities, please don’t hesitate to get in touch. Follow me on social media and drop me an email.",
+    "welcomeMessage": "I’m excited to hear from you! If you’d like to discuss any of my projects or explore potential opportunities, feel free to get in touch. Follow me on social media and drop me an email.",
     "buttons": [
       { "title": "About", "link": "/about" },
       { "title": "Projects", "link": "/projects" }
