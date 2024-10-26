@@ -107,7 +107,7 @@ function ProjectSlider() {
           <article key={index} className="slide">
             <img
               src={project.image}
-              alt={`Image of ${project.title}`} // Providing meaningful alt text
+              alt={`${project.title}`}
               className="slide-image"
             />
             <div className="slide-content">
@@ -131,7 +131,6 @@ function ProjectSlider() {
             className={`dot ${index === currentIndex ? 'active' : ''}`}
             onClick={() => goToSlide(index)}
             role="button"
-            aria-label={`Go to slide ${index + 1}`}
           ></span>
         ))}
       </nav>

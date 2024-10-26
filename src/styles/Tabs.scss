@@ -91,6 +91,9 @@
   opacity: 1;
   visibility: visible;
   z-index: 35; 
+  @media(min-width:768px){
+    width: 400px;
+  }
 }
 
 

@@ -117,8 +117,8 @@
             "Security and SEO plugins integrated for optimization"
           ],
           "Features": [
-            "Interactive gameplay to identify the flags of Canada's provinces and territories",
-            "Fun and educational, suitable for students and geography enthusiasts alike"
+            "Booking System: Integrated booking functionality with availability calendars for real-time tour scheduling.",
+            "Interactive Maps: Users can view tour routes and destinations via interactive maps."
           ],
           "Contributions": [
             "Collaborated in the initial planning phase of the project",
@@ -130,6 +130,39 @@
         }
       },
       "websiteLink": "#"
+    },
+
+    {
+      "id": 5,
+      "title": "Portfolio Website",
+      "shortDescription": "A modern and responsive portfolio website built with React to showcase projects and skills.",
+      "image": "/images/projects/portfolio.webp",
+      "alt": "Screenshot of Mahdi Roozbahani's portfolio website",
+      "detailedDescription": {
+        "overview": "This portfolio website was built using React to showcase my projects, skills, and experience in front-end development. It serves as an interactive platform for potential clients and employers to learn more about my work.",
+        "sections": {
+          "Technologies": [
+            "Built using React for dynamic component management",
+            "Styled with SASS for a clean and responsive design",
+            "Hosted on SiteGround for reliable performance",
+            "Deployed with Vite for fast build times"
+          ],
+          "Features": [
+            "Project Showcase: Displayed with an interactive slider for smooth navigation",
+            "Responsive Design: Ensures compatibility across all devices and screen sizes",
+            "Animations: Smooth text and image animations using CSS and Framer Motion",
+            "JSON-based Content: All content is dynamically sourced from JSON files for easy updates"
+          ],
+          "Contributions": [
+            "Designed and developed the entire site structure and layout",
+            "Created custom components using React",
+            "Styled all UI elements using SASS for consistency and responsiveness",
+            "Implemented JSON-based content management for easy future updates",
+            "Ensured cross-browser compatibility and fast performance"
+          ]
+        }
+      },
+      "websiteLink": "https://mahdiroozbahani.com"
     }
   ],
   "buttons": [

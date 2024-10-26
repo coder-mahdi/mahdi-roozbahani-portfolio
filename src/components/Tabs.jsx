@@ -55,7 +55,16 @@ function Tabs() {
             activeTab === index && (
               <div key={index} className={`tab-content ${activeTab === index ? 'show' : ''}`}>
               <h2>{tab.title}</h2>
-              <p>{tab.content}</p>
+              {/* اگر محتوای تب لیست باشد */}
+              {Array.isArray(tab.content) ? (
+                <ul>
+                  {tab.content.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p>{tab.content}</p> 
+              )}
             </div>
             
             )

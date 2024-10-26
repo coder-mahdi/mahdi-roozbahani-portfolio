@@ -33,32 +33,37 @@ function SingleProject() {
 
   const renderSections = (sections) => {
     return Object.keys(sections).map((sectionTitle, idx) => (
-      <div key={idx} className="project-section">
+      <section key={idx} className="project-section">
         <h3>{sectionTitle}</h3>
         <ul>
           {sections[sectionTitle].map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
-      </div>
+      </section>
     ));
   };
 
   return (
     <Layout helloText={project.title} buttonsData={buttonsData}>
-      <div className="single-project">
-        <div className="project-image-wrapper">
-          <img src={project.image} alt={project.title} className="project-image" />
-          <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className="visit-site-btn">
+      <article className="single-project">
+        <figure className="project-image-wrapper">
+          <img src={project.image} alt={project.altText || `${project.title}`} className="project-image" />
+          <a 
+            href={project.websiteLink} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="visit-site-btn" 
+          >
             Visit Project Website
           </a> 
-        </div>
+        </figure>
 
-        <div className="project-content">
+        <section className="project-content">
           <p>{project.detailedDescription.overview}</p>
           {renderSections(project.detailedDescription.sections)}
-        </div>
-      </div>
+        </section>
+      </article>
     </Layout>
   );
 }

@@ -32,7 +32,7 @@ function Home() {
     <Layout helloText={helloText} buttonsData={buttonsData}>
       <div className="content-area-home">
         <div className="text-slide-container">
-          <h1 className="animated-text" aria-label="Animated greeting text" tabIndex="0" >
+          <h1 className="animated-text">
             <div className="hello-text">{helloText}</div> 
             <div className="animation">
               <div className="second">
