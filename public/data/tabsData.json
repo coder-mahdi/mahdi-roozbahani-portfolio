@@ -2,12 +2,23 @@
     "tabs": [
       {
         "title": "Work Experience",
-        "content": "I spent a decade as a journalist before becoming a travel writer and leading tours in Africa. I authored a travel book and launched a travel startup. My passion for programming led me to pursue formal education and start my career as a front-end developer."
+        "content": [
+          "My journey in web development includes working on a variety of projects using React, WordPress, and SASS. I have built custom WordPress themes using PHP, ensuring high standards of SEO and security. I led the Call Me Guide project, where I spearheaded frontend development with React, and managed backend tasks with Laravel and PHP for server-side logic.",
+          "Before transitioning to web development, I spent 10 years as a journalist, authored a travel book, and led adventure tours across Africa."
+        ]
+        
       },
       {
         "title": "Education",
-        "content": "I hold a bachelor’s degree in Journalism and a master’s degree in Communications, with my thesis focused on social media and the role of Twitter in public opinion. Currently, I am studying Front-End Development at BCIT."
+        "content": [
+          "Front-End Web Developer, 2024, BCIT",
+          "HTML, CSS, AND JAVASCRIPT FOR WEB DEVELOPERS, 2023, Johns Hopkins University",
+          "Master’s Degree in Communication Sciences, 2019",
+          "Bachelor’s Degree in Journalism, 2013"
+        ]
       }
+      
+      
     ]
   }
   

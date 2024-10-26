@@ -1,5 +1,4 @@
-@import 'Sidebar.scss';
-@import 'BrushTransition.scss';
+@use 'Sidebar.scss';
 
 
 .home-page {
@@ -7,87 +6,89 @@
 
 }
 
-.main-content{
-  // display: flex;
-  // flex-direction: column;
-  // flex-wrap: wrap;
-  // justify-content: space-between; /* تنظیم فاصله و توزیع عناصر */
-  // align-items: flex-start; 
-}
-
-
-
 .content-area {
-    padding-top: 110px;
-//   margin-top: 55px;
+  padding-top: 110px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  // justify-content: space-between; /* تنظیم فاصله و توزیع عناصر */
-  // align-items: flex-start; 
+}
+
+.hello-text{
+  font-size: 19px;
+
+  @media (min-width: 768px) {
+    font-size: 28.8px;
+ }
+
+
+}
+
+.hello-text {
+  display: inline-block;
+  position: relative;
+  animation: slideInLeft 3s forwards; 
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-150%); 
+  }
+  80% {
+    transform: translateX(0); 
+  }
+  100% {
+    transform: translateX(0); 
+  }
 }
 
 
-// wellcom message
-
-  .welcome-message-wrapper{
-    margin-top: 30px;
-    margin-left: 100px;
-    margin-right: 70px;
-
-  }
-
-  .welcome-message {
-    font-size: 1.2em;
-    text-align: left;
-    white-space: pre-wrap;
-    border-right: 2px solid rgba(255, 255, 255, 0.75); /* مکان‌نما */
-    animation: blinkingCursor 500ms steps(50) infinite normal;
-  }
-  
-  @keyframes blinkingCursor {
-    from { border-right-color: rgba(255, 255, 255, 0.75); }
-    to { border-right-color: transparent; }
-  }
 
 
-
-  // Buttons
-
-  .buttons-wrapper{
+  .buttons-wrapper {
+    align-items: center;
     font-size: 50px;
     display: flex;
     flex-direction: column;
-    // bottom: 150px;
-    // margin-top: 20px; /* فاصله مناسب از ولکام مسیج */
-    // position: relative;
-    // margin-top: 5vh;
-    // left: 50%;
-    margin-top: 50px;
-    transform: translate(25%);
+    margin-top: 30px;
+    left: 0;
+    right: 0;
   }
-  
 
   .key-animation {
-    font-size: 1em; /* اندازه‌ی متن برای دکمه */
+    font-size: 1em; 
     display: inline-block;
-    letter-spacing: -0.05em;
+    letter-spacing: 1.5px;
     transition: transform 0.2s;
-    animation: pressDown 2s infinite; /* افزودن انیمیشن */
+    animation: pressDown 2s infinite; 
   }
-  
+
+  .key-animation:hover {
+    font-style: italic;
+    transition: font-style 0.3s ease;
+}
+
+
   @keyframes pressDown {
     0%, 100% {
       transform: translateY(0);
     }
     50% {
-      transform: translateY(10px); /* شبیه‌سازی فشار دادن کلید */
+      transform: translateY(10px)
     }
   }
   
   
 
   @media (min-width: 768px) and (max-width: 1024px) {
+
+.buttons-wrapper{
+  font-size: 3.9rem;
+  margin-top: 70px;
+}
+.key-animation{
+  margin-top: 10px;
+}
+
 
   }
 
@@ -101,11 +102,11 @@
 
   .circle-pointer {
     position: absolute;
-    width: 50px; /* عرض دایره */
-    height: 50px; /* ارتفاع دایره */
-    border: 2px solid rgb(253, 160, 160); /* خط سفید دور دایره */
-    border-radius: 50%; /* برای گرد شدن */
-    pointer-events: none; /* جلوگیری از کلیک روی دایره */
+    width: 50px; 
+    height: 50px; 
+    border: 2px solid rgb(253, 160, 160); 
+    border-radius: 50%; 
+    pointer-events: none; 
     box-sizing: border-box;
     z-index: 1100;
   }

@@ -12,38 +12,38 @@ import { Link } from 'react-router-dom';
 function Layout({ children, helloText, buttonsData }) {
   const ref = useRef(null);
   const { x, y } = useFollowPointer(ref);
-  const location = useLocation(); // گرفتن مسیر فعلی صفحه
+  const location = useLocation(); 
 
   return (
     <div className="home-page">
       <Header />
-      <div className="main-content">
+      <main className="main-content">
         <motion.div style={{ x, y }} ref={ref} className="circle-pointer"></motion.div>
 
         <div className="content-area">
           {location.pathname !== '/' && (
             <div className="text-slide-container">
               <div className="animated-text">
-                <div className="hello-text">{helloText}</div>
+                <h1 className="hello-text">{helloText}</h1>
               </div>
             </div>
           )}
 
           {children}
 
-          <div className="buttons-wrapper">
-            {buttonsData.map((button, index) => (
-              <Link key={index} to={button.link} className="custom-button">
-                <span className="key-animation">{button.title}</span>
-              </Link>
-            ))}
-          </div>
-
           <Sidebar />
           <Tabs />
-          <Footer />
         </div>
-      </div>
+
+        <div className="buttons-wrapper">  
+          {buttonsData.map((button, index) => (
+            <Link key={index} to={button.link} className="custom-button">
+              <span className="key-animation">{button.title}</span>
+            </Link>
+          ))}
+        </div>
+      </main>
+      <Footer />
     </div>
   );
 }

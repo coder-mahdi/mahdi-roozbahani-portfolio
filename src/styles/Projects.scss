@@ -1,88 +1,147 @@
 .project-slider {
-    position: relative;
+  position: relative;
+  max-width: 70%;
+  margin: 50px auto;
+  overflow: hidden;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    max-width: 900px;
+    margin-left: 80px;
+    margin-right: 100px;
+  }
+
+  @media (min-width: 1024px) {
     max-width: 70%;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: -55px auto 0 auto;
+  }
+
+  .slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
     overflow: hidden;
-  
-    .slider-wrapper {
-      display: flex;
-      transition: transform 0.5s ease-in-out; /* انیمیشن انتقال */
+
+    &:hover .slide-content {
+      opacity: 1; 
     }
-  
-    .slide {
-      min-width: 100%; /* اسلایدها تمام عرض صفحه را می‌گیرند */
-      box-sizing: border-box;
-      text-align: center;
-  
-      .slide-image {
+
+    .slide-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+      @media (min-width: 1024px) {
+        width: 80%; 
+        margin: 0 auto; 
+      }
+    }
+
+    .slide-content {
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+
+      @media (min-width: 1024px) {
+        position: absolute; 
+        top: 0;
+        left: 0;
+        width: 80%; 
+        height: 100%; 
+        left: 10%; 
+        opacity: 0; 
+      }
+
+      @media (max-width: 1024px) {
+        position: static; 
         width: 100%;
         height: auto;
-        border-radius: 10px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        opacity: 1; 
+        transform: none; 
       }
-  
-      .slide-content {
-        margin-top: 15px;
-        background-color: rgba(0, 0, 0, 0.6); /* پس‌زمینه تیره برای باکس متن */
-        padding: 20px;
-        border: 2px solid #fff;
-        border-radius: 10px;
-        max-width: 80%;
-        margin: 20px auto 0;
-        opacity: 0; /* ابتدا نامرئی است */
-        transform: translateX(100%); /* متن از سمت راست خارج است */
-        animation: slideIn 0.8s ease forwards; /* انیمیشن ورود متن */
-  
-        h3 {
-          font-size: 1.8rem;
-          color: #fff;
+
+      h2 {
+        padding-top: 20px;
+        margin-top: 5px;
+        font-size: 18px;
+        color: #fff;
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+          font-size: 23px;
         }
-  
-        p {
-          font-size: 1.2rem;
-          color: #ddd;
-          margin-top: 10px;
+
+        @media (min-width: 1024px) {
+          font-size: 28px;
         }
       }
-    }
-  
-    /* انیمیشن ورود متن */
-    @keyframes slideIn {
-      from {
-        opacity: 0;
-        transform: translateX(100%); /* ورود از سمت راست */
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0); /* به حالت عادی برگردد */
-      }
-    }
-  
-    /* دایره‌های ناوبری */
-    .navigation-dots {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-  
-      .dot {
-        height: 15px;
-        width: 15px;
-        background-color: #ddd;
-        border-radius: 50%;
-        margin: 0 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-  
-        &.active {
-          background-color: #333;
+
+      p {
+        font-size: 16px;
+        color: #ddd;
+        margin: 10px;
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+          font-size: 22px;
         }
-  
-        &:hover {
-          background-color: #555;
+
+        @media (min-width: 1024px) {
+          font-size: 25px;
         }
       }
     }
   }
-  
+
+  .navigation-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+
+    .dot {
+      height: 15px;
+      width: 15px;
+      background-color: #ddd;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &.active {
+        background-color: #333;
+      }
+
+      &:hover {
+        background-color: #555;
+      }
+    }
+  }
+}
+
+
+
+.learn-more-btn{
+  border-radius: 5px;
+  padding: 10px 10px;
+  color: white;
+  background-color: #0f354d;
+  font-size: 10px;
+
+  @media (min-width: 768px) {
+    font-size: 13px;
+    }
+    @media (min-width: 1024px) {
+      font-size: 16px;
+    }
+}
+
+
+.learn-more-btn:hover {
+  background-color: #123E59;
+}
+

@@ -1,18 +1,10 @@
-import React, { useEffect, useState, useRef } from 'react';
-import Header from './Header.jsx';
-import Sidebar from './Sidebar.jsx';
-import Footer from './Footer.jsx';
-import Tabs from './Tabs.jsx';
-import ProjectSlider from './ProjectSlider'; // افزودن ProjectSlider
-import { motion } from "framer-motion";
-import { useFollowPointer } from "./useFollowPointer";
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import Layout from './Layout.jsx';
+import ProjectSlider from './ProjectSlider'; 
 import '../styles/Projects.scss'; 
 
 function Projects() {
   const [helloText, setHelloMessage] = useState("");
-  const ref = useRef(null);
-  const { x, y } = useFollowPointer(ref);
 
   const buttonsData = [
     { title: "About", link: "/about" }
@@ -29,35 +21,9 @@ function Projects() {
   }, []);
 
   return (
-    <div className="home-page">
-      <Header />
-      <div className="main-content">
-        <motion.div style={{ x, y }} ref={ref} className="circle-pointer"></motion.div>
-
-        <div className="content-area">
-          <div className="text-slide-container">
-            <div className="animated-text">
-              <div className="hello-text">{helloText}</div>
-            </div>
-          </div>
-        
-          <ProjectSlider />
-
-        </div>
-
-        <div className="buttons-wrapper">
-          {buttonsData.map((button, index) => (
-            <Link key={index} to={button.link} className="custom-button">
-              <span className="key-animation">{button.title}</span>
-            </Link>
-          ))}
-        </div>
-
-        <Sidebar />
-        <Tabs />
-        <Footer />
-      </div>
-    </div>
+    <Layout helloText={helloText} buttonsData={buttonsData}>
+      <ProjectSlider />
+    </Layout>
   );
 }
 

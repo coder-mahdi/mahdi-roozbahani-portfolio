@@ -10,9 +10,13 @@ export function useFollowPointer(ref) {
   const y = useSpring(yPoint, spring);
 
   useEffect(() => {
-    if (!ref.current) return;
+    const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
+   
+    if (isTouchDevice) return;
 
     const handlePointerMove = ({ clientX, clientY }) => {
+      if (!ref.current) return;
+
       const element = ref.current;
 
       frame.read(() => {
@@ -24,7 +28,7 @@ export function useFollowPointer(ref) {
     window.addEventListener("pointermove", handlePointerMove);
 
     return () => window.removeEventListener("pointermove", handlePointerMove);
-  }, []);
+  }, [xPoint, yPoint, ref]);
 
   return { x, y };
 }

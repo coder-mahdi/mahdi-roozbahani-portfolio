@@ -1,25 +1,15 @@
-import React, { useEffect, useState, useRef } from 'react';
-import Header from './Header.jsx';
-import Sidebar from './Sidebar.jsx';
-import Footer from './Footer.jsx';
-import Tabs from './Tabs.jsx';
+import React, { useEffect, useState } from 'react';
+import Layout from './Layout.jsx';
+import Accordion from './Accordion'; 
 import '../styles/About.scss';
-import { motion } from "framer-motion";
-import { useFollowPointer } from "./useFollowPointer";
-import Accordion from './Accordion'; // افزودن کامپوننت اکاردیون
-import { Link } from 'react-router-dom';
-
 
 function About() {
   const [helloText, setHelloMessage] = useState("");
-  const [accordionData, setAccordionData] = useState([]); // برای نگهداری داده‌های اکاردیون
-  const ref = useRef(null);
-  const { x, y } = useFollowPointer(ref);
-
+  const [accordionData, setAccordionData] = useState([]); 
 
   const buttonsData = [
     { title: "Projects", link: "/projects" }
-  ]
+  ];
 
   useEffect(() => {
     fetch('/data/aboutData.json')
@@ -27,39 +17,19 @@ function About() {
       .then((data) => {
         console.log(data);
         setHelloMessage(data.helloMessage);
-        setAccordionData(data.tabs); // ذخیره داده‌های تب‌ها
+        setAccordionData(data.tabs); 
       })
       .catch((error) => console.error('Error loading about data:', error));
   }, []);
 
   return (
-    <div className="home-page">
-      <Header />
-      <div className="main-content">
-        <motion.div style={{ x, y }} ref={ref} className="circle-pointer"></motion.div>
-
-        <div className="content-area">
-          <div className="text-slide-container">
-            <div className="animated-text">
-              <div className="hello-text">{helloText}</div>
-            </div>
-          </div>
+    <Layout helloText={helloText} buttonsData={buttonsData}>
+      <main>
+        <section>
           {accordionData.length > 0 && <Accordion data={accordionData} />}
-        </div>
-
-        <div className="buttons-wrapper">
-  {buttonsData.map((button, index) => (
-    <Link key={index} to={button.link} className="custom-button">
-      <span className="key-animation">{button.title}</span>
-    </Link>
-  ))}
-</div>
-
-        <Sidebar />
-        <Tabs />
-        <Footer />
-      </div>
-    </div>
+        </section>
+      </main>
+    </Layout>
   );
 }
 

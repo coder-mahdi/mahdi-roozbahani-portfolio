@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 body {
+  font-family: 'Comic Neue';
   color: #333;
   background-color: #EBEBF2; 
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
 }
+
 
 
 p {
@@ -15,12 +17,16 @@ p {
 }
 
 
-h1 {
-  font-size: 2.8rem;
+h1, h2, h3,h4 {
+  font-family: 'Nunito';
   line-height: 1.1;
 }
 
 a {
   text-decoration: none; 
   color: #333; 
+}
+
+.buttons-wrapper {
+  font-family: 'Nunito';
 }

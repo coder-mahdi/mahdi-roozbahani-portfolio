@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/AnimatedText.scss'; 
 
-function AnimatedText({ finalMessage, animationDuration = 4 }) {
+function AnimatedText({ finalMessage }) {
   const [showText, setShowText] = useState(false);
 
   useEffect(() => {
@@ -12,11 +12,13 @@ function AnimatedText({ finalMessage, animationDuration = 4 }) {
   }, []);
 
   return (
-    <div className="animated-text-wrapper">
-      <p className={`animated-text ${showText ? 'show' : ''}`}>
+    <section className="animated-text-wrapper" role="region" aria-live="polite">
+      <p 
+        className={`animated-text ${showText ? 'show' : ''}`}
+      >
         {finalMessage}
       </p>
-    </div>
+    </section>
   );
 }
 

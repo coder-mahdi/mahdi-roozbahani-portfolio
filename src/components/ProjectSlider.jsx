@@ -3,91 +3,139 @@ import { Link } from 'react-router-dom';
 import '../styles/Projects.scss'; 
 
 function ProjectSlider() {
-    const [projects, setProjects] = useState([]);
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [autoPlay, setAutoPlay] = useState(true);
-  
-    // بارگذاری داده‌ها از فایل JSON
-    useEffect(() => {
-      fetch('/data/projectsData.json')
-        .then((response) => response.json())
-        .then((data) => setProjects(data.projects))
-        .catch((error) => console.error('Error loading project data:', error));
-    }, []);
-  
-    // پخش خودکار اسلایدر
-    useEffect(() => {
-      if (autoPlay) {
-        const interval = setInterval(() => {
-          setCurrentIndex((prevIndex) =>
-            prevIndex === projects.length - 1 ? 0 : prevIndex + 1
-          );
-        }, 3000); // هر 3 ثانیه یک اسلاید جابجا شود
-  
-        return () => clearInterval(interval); // پاک کردن تایمر وقتی کامپوننت از بین برود
-      }
-    }, [autoPlay, currentIndex, projects.length]);
-  
-    // کلیک روی دایره‌ها برای جابجایی به اسلاید خاص
-    const goToSlide = (index) => {
-      setCurrentIndex(index);
-      setAutoPlay(false); // اگر کاربر دایره‌ای را کلیک کند، پخش خودکار متوقف می‌شود
-    };
-  
-    // توقف پخش خودکار هنگام هاور کردن
-    const handleMouseEnter = () => {
-      setAutoPlay(false); // وقتی کاربر ماوس را روی اسلایدر می‌برد، پخش خودکار متوقف شود
-    };
-  
-    const handleMouseLeave = () => {
-      setAutoPlay(true); // وقتی کاربر ماوس را از اسلایدر خارج می‌کند، پخش خودکار دوباره شروع شود
-    };
-  
-    if (projects.length === 0) {
-      return <div>Loading...</div>; // نمایش پیام لودینگ تا زمان بارگذاری داده‌ها
+  const [projects, setProjects] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(true);
+
+  // Variables for touch events
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  useEffect(() => {
+    fetch('/data/projectsData.json')
+      .then((response) => response.json())
+      .then((data) => setProjects(data.projects))
+      .catch((error) => console.error('Error loading project data:', error));
+  }, []);
+
+  useEffect(() => {
+    if (autoPlay) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) =>
+          prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 5000);
+
+      return () => clearInterval(interval); 
     }
-  
-    return (
+  }, [autoPlay, currentIndex, projects.length]);
+
+  // Handle swipe start
+  const handleTouchStart = (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  };
+
+  // Handle swipe move (optional, if needed)
+  const handleTouchMove = (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+  };
+
+  // Handle swipe end
+  const handleTouchEnd = () => {
+    if (touchStartX - touchEndX > 50) {
+      // Swipe left (next slide)
+      setCurrentIndex((prevIndex) => (prevIndex === projects.length - 1 ? 0 : prevIndex + 1));
+      setAutoPlay(false);
+    }
+
+    if (touchStartX - touchEndX < -50) {
+      // Swipe right (previous slide)
+      setCurrentIndex((prevIndex) => (prevIndex === 0 ? projects.length - 1 : prevIndex - 1));
+      setAutoPlay(false);
+    }
+  };
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+    setAutoPlay(false); 
+  };
+
+  const handleMouseEnter = () => {
+    setAutoPlay(false);
+  };
+
+  const handleMouseLeave = () => {
+    setAutoPlay(true); 
+  };
+
+  // Add keyboard navigation
+  const handleKeyDown = (e) => {
+    if (e.key === 'ArrowRight') {
+      setCurrentIndex((prevIndex) => (prevIndex === projects.length - 1 ? 0 : prevIndex + 1));
+      setAutoPlay(false);
+    } else if (e.key === 'ArrowLeft') {
+      setCurrentIndex((prevIndex) => (prevIndex === 0 ? projects.length - 1 : prevIndex - 1));
+      setAutoPlay(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [currentIndex, projects.length]);
+
+  if (projects.length === 0) {
+    return <p>Loading...</p>; 
+  }
+
+  return (
+    <section
+      className="project-slider"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <div
-        className="project-slider"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        className="slider-wrapper"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
-        <div
-          className="slider-wrapper"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {projects.map((project, index) => (
-            <div key={index} className="slide">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="slide-image"
-              />
-              <div className="slide-content">
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-  
+        {projects.map((project, index) => (
+          <article key={index} className="slide">
+            <img
+              src={project.image}
+              alt={`${project.title}`}
+              className="slide-image"
+            />
+            <div className="slide-content">
+              <h2>{project.title}</h2>
+              <p>{project.shortDescription}</p>
+
+              <p>
                 <Link to={`/singleproject/${project.id}`} className="learn-more-btn">
                   Learn More
                 </Link>
-              </div>
+              </p>
             </div>
-          ))}
-        </div>
-  
-        {/* دایره‌های ناوبری */}
-        <div className="navigation-dots">
-          {projects.map((_, index) => (
-            <span
-              key={index}
-              className={`dot ${index === currentIndex ? 'active' : ''}`}
-              onClick={() => goToSlide(index)}
-            ></span>
-          ))}
-        </div>
+          </article>
+        ))}
       </div>
-    );
-  }
-  
-  export default ProjectSlider;
+
+      <nav className="navigation-dots" aria-label="Slider Navigation">
+        {projects.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${index === currentIndex ? 'active' : ''}`}
+            onClick={() => goToSlide(index)}
+            role="button"
+          ></span>
+        ))}
+      </nav>
+    </section>
+  );
+}
+
+export default ProjectSlider;

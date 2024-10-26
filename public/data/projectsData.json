@@ -1,32 +1,177 @@
 {
-    "helloMessage": "My Projects",
-    "projects": [
-        {
-            "id": 1,
-            "title": "Project 1",
-            "shortDescription": "This is a short description of Project 1.",
-            "image": "/images/project1.png",
-            "detailedDescription": "This is the detailed description of Project 1 with more information.",
-            "websiteLink": "https://www.project1.com"
-          },
-      {
-        "id": 2,
-        "title": "Project 2",
-        "description": "This is the second project description.",
-        "image": "/images/Project2.png",
-        "detailedDescription": "This is the detailed description of Project 1 with more information."
+  "helloMessage": "My Projects",
+  "projects": [
+    {
+      "id": 1,
+      "title": "35mm-app",
+      "shortDescription": "A dynamic movie database built with modern technologies to offer a smooth and enjoyable experience for cinema lovers.",
+      "image": "/images/projects/moviedatabase.webp",
+      "alt": "Screenshot of 35mm movie database app", 
+      "detailedDescription": {
+        "overview": "35mm-app: A dynamic movie database built with modern technologies to offer a smooth and enjoyable experience for cinema lovers.",
+        "sections": {
+          "Technologies": [
+            "React: Used for component management",
+            "Vite: Utilized for fast builds",
+            "SASS: Applied for advanced styling"
+          ],
+          "TMDb API": [
+            "This app used the TMDb API to provide seamless access to a vast collection of movies across various genres and time periods."
+          ],
+          "Responsive Design": [
+            "High-fidelity wireframes: The design was initially structured using Adobe XD for a clear layout.",
+            "SASS implementation: During the development phase, SASS was used to bring the design to life.",
+            "Gulp: Utilized to ensure consistent breakpoints and alignment.",
+            "The app was fully responsive, designed to offer an optimal viewing experience on desktops, tablets, and smartphones, regardless of screen size or orientation."
+          ],
+          
+          "Key Features": [
+            "Browsed and searched for movies",
+            "Created and managed a personal favorites list",
+            "Allowed users to read and leave reviews"
+          ],
+          "React Router": [
+            "React Router was implemented for smooth navigation, providing users with a seamless, user-friendly experience."
+          ],
+          "Contributions": [
+            "Assisted in coding React components",
+            "Styled UI elements using SASS for a polished look",
+            "Organized project structure and optimized stylesheets"
+          ]
+        }
       },
-      {
-        "title": "Project 3",
-        "description": "This is the third project description.",
-        "image": "/images/Project3.jpg"
-      }
-    ],
-    "buttons": [
-      {
-        "title": "About",
-        "link": "/about"
-      }
-    ]
-  }
-  
+      "websiteLink": "https://mahdiroozbahani.com/35mm-app"
+    },    
+    {
+      "id": 2,
+      "title": "Call Me Guide",
+      "shortDescription": "Call Me Guide is a Vancouver-based travel startup offering an advanced platform built using modern technologies like React, Laravel, and PHP. It provides real-time travel guidance, secure payments via Stripe, and interactive maps using the Google Maps API.",
+      "image": "/images/projects/callmeguide.webp",
+      "alt": "Screenshot of Call Me Guide travel app",
+      "detailedDescription": {
+        "overview": "Call Me Guide: A platform offering real-time travel guidance with a user-friendly interface and secure payment integration.",
+        "sections": {
+          "Technologies": [
+            "React: Used for frontend development",
+            "Laravel: Utilized for backend functionality",
+            "PHP: Applied for server-side logic and APIs"
+          ],
+          "Features": [
+            "Secure payments via Stripe: Providing seamless and secure payment processing for users.",
+            "Interactive maps using the Google Maps API: Enabling users to explore travel destinations in real-time.",
+            "Real-time travel guidance and support: Offering travelers immediate and accurate travel assistance."
+          ],
+          "Contributions": [
+            "Founder and main architect of the platform",
+            "Led the overall project management and development",
+            "Coordinated collaboration between frontend, backend, and design teams",
+            "Oversaw the entire project lifecycle to ensure business and technical alignment",
+            "Enhanced user experience through real-time updates and intuitive navigation",
+            "Worked on frontend design and interactivity using React"
+          ]
+        }
+      },
+      "websiteLink": "https://www.callmeguide.com"
+    },    
+    {
+      "id": 3,
+      "title": "Flag Game",
+      "shortDescription": "Flag Game is an interactive educational project focused on the provinces and territories of Canada.",
+      "image": "/images/projects/flaggame.webp",
+      "alt": "Screenshot of Flag Game website",
+      "detailedDescription": {
+        "overview": "Flag Game: An engaging educational game focused on Canadian geography, developed to enhance users' knowledge of Canada's provinces and territories.",
+        "sections": {
+          "Technologies": [
+            "JavaScript: Used for core game logic and functionality",
+            "CSS: Applied for styling and layout of the game"
+          ],
+          "Features": [
+            "Interactive gameplay: Players identify the flags of Canada's provinces and territories.",
+            "Educational and fun: Suitable for students and geography enthusiasts alike, combining learning with entertainment."
+          ],
+          "Contributions": [
+            "Handled the entire project from concept to completion",
+            "Designed and implemented the game flow and interaction logic", 
+            "Developed the core functionality using Java", 
+            "Created the user interface and visual elements with CSS", 
+            "Ensured the game is both educational and engaging for users",
+            "Managed all aspects of the project, including design, development, and testing"
+          ]
+        }
+      },
+      "websiteLink": "https://mahdiroozbahani.com/flag-game/"
+    },
+{
+  "id": 4,
+  "title": "Pacific Peaks",
+  "shortDescription": "Pacific Peaks is a website for an adventure tour business offering day and multi-day tours throughout the year, providing users with a seamless experience to explore various adventure packages across all seasons.",
+  "image": "/images/projects/pacificpeaks.webp",
+  "alt": "Screenshot of Pacific Peaks adventure tour website",
+  "detailedDescription": {
+    "overview": "Pacific Peaks is a new business project built with WordPress. The project is currently ongoing and has not been fully launched yet. Pacific Peaks offers adventure tours ranging from one-day to multi-day options in all four seasons with various packages.",
+    "sections": {
+      "Technologies": [
+        "WordPress and WooCommerce: The platform is built using these powerful tools for flexibility and e-commerce functionality.",
+        "Custom WordPress theme: A fully customized theme developed to meet the unique needs of the business.",
+        "PHP: Custom backend code written to manage specific functionalities of the site.",
+        "SASS: Applied for a more structured and maintainable approach to styling.",
+        "Security and SEO plugins: Integrated to ensure optimal performance and security."
+      ],
+      "Features": [
+        "Booking System: Integrated booking functionality with availability calendars for real-time tour scheduling.",
+        "Interactive Maps: Users can view tour routes and destinations via interactive maps."
+      ],
+      "Contributions": [
+        "Collaborated in the initial planning phase of the project",
+        "Focused on backend development, writing custom PHP code for the WordPress theme",
+        "Worked extensively on styling the pages using SASS to ensure a polished and consistent design",
+        "Contributed to the integration of WooCommerce and other WordPress functionalities",
+        "Helped implement SEO and security plugins to enhance the performance and safety of the website"
+      ]
+    }
+  },
+  "websiteLink": "#"
+},
+
+{
+  "id": 5,
+  "title": "Portfolio Website",
+  "shortDescription": "A modern and responsive portfolio website built with React to showcase projects and skills.",
+  "image": "/images/projects/portfolio.webp",
+  "alt": "Screenshot of Mahdi Roozbahani's portfolio website",
+  "detailedDescription": {
+    "overview": "This portfolio website was built using React to showcase my projects, skills, and experience in front-end development. It serves as an interactive platform for potential clients and employers to learn more about my work.",
+    "sections": {
+      "Technologies": [
+        "React: Used for dynamic component management and to create an interactive user experience.",
+        "SASS: Applied for clean, maintainable, and responsive styling.",
+        "SiteGround: The website is hosted on SiteGround, ensuring reliable performance and uptime.",
+        "Vite: Deployed with Vite for fast build times and efficient development."
+      ],
+      "Features": [
+        "Project Showcase: Includes an interactive slider to showcase projects with smooth navigation.",
+        "Responsive Design: Ensures compatibility across all devices, from desktops to smartphones.",
+        "Animations: Smooth text and image animations powered by CSS and Framer Motion for enhanced user experience.",
+        "JSON-based Content: All content is dynamically sourced from JSON files, allowing easy updates without modifying the code."
+      ],
+      "Contributions": [
+        "Designed and developed the entire site structure and layout.",
+        "Created custom React components for dynamic and reusable UI elements.",
+        "Styled all UI elements using SASS, ensuring design consistency and responsiveness.",
+        "Implemented a JSON-based content management system for easier future updates.",
+        "Ensured cross-browser compatibility and optimized performance for faster load times."
+      ]
+    }
+  },
+  "websiteLink": "https://mahdiroozbahani.com"
+}
+
+  ],
+  "buttons": [
+    {
+      "title": "About",
+      "link": "/about"
+    }
+  ]
+}
