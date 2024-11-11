@@ -16,7 +16,7 @@
         ],
         "Tools": [
           { "name": "GitHub", "logo": "/images/skills/github.png" },
-          { "name": "Visual Studio", "logo": "/images/skills/visual_studio_icon.png" },
+          { "name": "Visual Studio code", "logo": "/images/skills/vscode.png" },
           { "name": "WordPress", "logo": "/images/skills/wordpress.png" },
           { "name": "Shopify", "logo": "/images/skills/shopify.png" },
           "Git", "npm", "Webpack", "Gulp", "SQL"
